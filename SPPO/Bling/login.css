@@ -37,12 +37,12 @@ body{
     display:inline-block;
 }
 #btnlogin{  
-    color: rgb(236, 230, 230);  
     background: #337ab7;  
-    padding: 7px;   
     border: solid rgb(73, 62, 73) 1px;
     border-radius: 4px;
+    color: rgb(236, 230, 230);  
     position:relative;
+    padding: 7px;   
     bottom: 30px;
 }  
 #btnlogin:active {

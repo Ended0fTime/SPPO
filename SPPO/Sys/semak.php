@@ -11,9 +11,7 @@
     $idMarkah = 'M' . $number;  
     $idPeserta = $_POST['idPeserta'];
     $langkah = $_POST['langkah'] *0.04;
-    if ($langkah > 10) {        
-        $langkah = 10;
-    }
+    if ($langkah > 10) { $langkah = 10; }
     $keaslian = $_POST['keaslian'] *45/100;
     $kelihatan = $_POST['kelihatan'] *45/100;
     $jumlah = round($langkah + $keaslian + $kelihatan);
@@ -33,6 +31,7 @@
                     <p style='position:relative;text-align:center;'><a href='../Hakim/semakHakim.php'>Kembali</a></p>
               </div>";
     }
+    
     else if ($idPeserta[0] == 'P') {
         $sql ="INSERT INTO `markah` 
             (`idMarkah`, `idPeserta`, `langkah`, `keaslian`, `kelihatan`, `jumlahMarkah`, `komenHakim`) 

@@ -26,10 +26,12 @@
 
             if($count == 1){  
                 echo "<link rel = 'stylesheet' type = 'text/css' href = '../Bling/login.css'><div></div>
-                      <script>alert('Login Berjaya.')</script>";
+                      <script> alert('Login Berjaya.') </script>";
+
                 session_start();
                 $_SESSION['idPengguna'] = $id;
                 $_SESSION['userType'] = $loginType;
+
                 if ($loginType == 'peserta') {
                     echo "<script>window.location.href = '../Peserta/menuPeserta.php'</script>";
                 }

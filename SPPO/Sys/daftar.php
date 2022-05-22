@@ -1,9 +1,8 @@
 <?php   
         session_start();
-        include('authCheck.php');
         include('connection.php');    
 
-        //$_SESSION['userType'] = $_POST['btn'];
+        $_SESSION['userType'] = $_POST['btn'];
 
         if ($_SESSION['userType'] == 'admin')   {
                 $sql = "SELECT idHakim FROM hakim ORDER BY idHakim DESC LIMIT 1";
@@ -36,6 +35,7 @@
                                 alert('Hakim berjaya didaftarkan. ID hakim baru ialah $id');
                                 window.location.href = '../Admin/daftarHakim.php';
                         </script>";
+
                 // echo "<link rel = 'stylesheet' type = 'text/css' href = '../Bling/form.css'>
                 // <div id = 'frm'> <p  style='text-align:center;'> 
                 // Hakim berjaya didaftarkan. </p><h3 style='text-align:center;'><a>ID hakim baru ialah $id.</a></h3>
