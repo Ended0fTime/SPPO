@@ -25,27 +25,30 @@
         </div>
         
         <div class = 'content'>
-
             <div class = "frm" style="text-align:left;">  
-                    <form name = 'f1' action = '../Sys/kemaskini.php' onsubmit = 'return validation()' method = 'POST' autocomplete='off'>
+                <form name = 'f1' action = '../Sys/kemaskini.php' onsubmit = 'return validation()' method = 'POST' autocomplete='off'>
+                    
                     <p>  
                         <label> Nama Penuh: &nbsp &nbsp &nbsp </label>  
                         <input type = "text" id ="nama" name  = "nama" required
                         oninvalid="this.setCustomValidity('Isikan nama anda.')"
                         oninput="this.setCustomValidity('')" />  
                     </p>  
+
                     <p>  
                         <label> Kata Laluan: &nbsp &nbsp &nbsp &nbsp </label>  
                         <input type = "password" id ="pass" name  = "pass" required
                     oninvalid="this.setCustomValidity('Isikan kata laluan anda.')"
                     oninput="this.setCustomValidity('')" />
                     </p>
+
                     <p>  
                     <label> Pasti Kata Laluan: </label>  
                     <input type = "password" name  = "passcfm" required
                     oninvalid="this.setCustomValidity('Isikan kata laluan anda semula.')"
                         oninput="this.setCustomValidity('')" />
                     </p>  
+
                     <p>  
                         <label> Umur: &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp&nbsp </label>  
                         <input type = "number" id ="umur" name  = "umur" required
@@ -65,10 +68,13 @@
                     <?php echo "<button id = 'btnkemaskini' type = 'submit' name = 'id' value = '$_POST[id]'> Kemaskini </button>"; ?>
 
                 </form>
+
                 <?php $con=null; ?>
+                
             </div>
         </div>
     </div>
+
     <script>  
         function validation() {  
             var ps=document.f1.pass.value;  
@@ -83,5 +89,6 @@
             }     
         }                              
     </script>
+    
 </body>
 </html> 

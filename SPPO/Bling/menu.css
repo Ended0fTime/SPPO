@@ -31,14 +31,14 @@ body{
 
 .btn {
 	background-color:transparent;
+    border:3px solid #3a3b3a;
 	border-radius:13px;
-	border:3px solid #3a3b3a;
+    color:#404040;
 	cursor:pointer;
-	color:#404040;
-	font-family:Times New Roman;
-	font-size:21px;
 	padding:8px;
-    width: 20vw;
+    width:20vw;
+    font-family: Times New Roman;
+	font-size:21px;
 	text-decoration:none;
 }
 .btn:hover {

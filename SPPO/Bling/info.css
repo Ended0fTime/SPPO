@@ -31,13 +31,13 @@ body{
 }
 #btnchng {
 	background-color:transparent;
+    border:2px solid #737271;
 	border-radius:6px;
-	border:2px solid #737271;
-	cursor:pointer;
 	color:#000000;
+	cursor:pointer;
+	padding:7px 7px;
 	font-family:Arial;
 	font-size:15px;
-	padding:7px 7px;
 	text-decoration:none;
 }
 #btnchng:hover {

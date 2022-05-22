@@ -56,14 +56,15 @@ body{
 
 #btnkemaskini {
 	background-color:transparent;
+    border:2px solid #3a3b3a;
 	border-radius:5px;
-	border:2px solid #3a3b3a;
+    color:#000000;
 	cursor:pointer;
-	color:#000000;
+    margin-left: 39%;
 	padding:7px;
 	text-decoration:none;
     float:left;
-    margin-left: 39%;
+
 }
 #btnkemaskini:hover {
 	background:linear-gradient(to bottom, #ffce8a 5%, #ffdd8c 100%);
@@ -75,7 +76,7 @@ body{
 }
 
 @media only screen and (max-width: 1366px) {
-    .frm{
+    .frm {
         background: rgb(255, 222, 185, 0.6);
         border: solid rgb(0, 0, 0) 1px;
         border-radius: 3px; 

@@ -41,23 +41,24 @@ body{
 .table {
     border: solid rgb(73, 62, 73) 1px; 
     position: relative;
-    text-align:center;
     margin: auto;
+    text-align:center;
     font-size: 2.5vh;
 }
 .tableKeputusan {
     border: solid rgb(73, 62, 73) 1px; 
     position: relative;
-    text-align:center;
     margin: 40px auto;
+    text-align:center;
     font-size: 2.5vh;
 }
 
 .editDelete {
-    border: none;
     background:transparent;
-    font-size: 16px;
+    border: none;
     color:rgb(24, 64, 148);
+    font-size: 2.5vh;
+
 }
 .editDelete:hover {
     color:rgb(39, 120, 219);

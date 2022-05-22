@@ -8,11 +8,11 @@ body{
 .frm{  
     background: rgb(236, 230, 230);  
     border: solid rgb(73, 62, 73) 1px;  
-    width: 25%;  
     border-radius: 2px;  
     margin: 75px auto;  
     padding: 40px;
     padding-bottom: 24px;
+    width: 25%;  
 }  
 #jantina{
     position: relative;

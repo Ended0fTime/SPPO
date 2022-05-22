@@ -42,11 +42,11 @@
         </div>
 
         <div class = 'content'>
-            <a href='../General/info.php'><button class = 'btn' name = 'hakim' > Maklumat Diri </button></a>
+            <a href='../General/info.php'><button class = 'btn' name = 'hakim'> Maklumat Diri </button></a>
             <br><br>
-            <a href='../Hakim/semakHakim.php'><button class = 'btn' name = 'hakim' > Semak Karya</button></a>
+            <a href='../Hakim/semakHakim.php'><button class = 'btn' name = 'hakim'> Semak Karya</button></a>
             <br><br>
-            <a href='daftarHakim.php'><button class = 'btn' name = 'hakim' > Daftar Hakim </button></a>
+            <a href='daftarHakim.php'><button class = 'btn' name = 'hakim'> Daftar Hakim </button></a>
             <br><br>
             <a href='senarai.php'><button class = 'btn'> Senarai Ahli </button></a>
             <br><br>

@@ -15,18 +15,21 @@
                 oninvalid="this.setCustomValidity('Isikan nama anda.')"
                 oninput="this.setCustomValidity('')" />  
             </p>  
+
             <p style="text-align:left;">  
                 <label> Kata Laluan: &nbsp &nbsp &nbsp &nbsp </label>  
                 <input type = "password" id ="pass" name  = "pass" required
                 oninvalid="this.setCustomValidity('Isikan kata laluan anda.')"
                 oninput="this.setCustomValidity('')" />
             </p>
-                <p style="text-align:left;">  
+
+            <p style="text-align:left;">  
                 <label> Pasti Kata Laluan: </label>  
                 <input type = "password" name  = "passcfm" required
                 oninvalid="this.setCustomValidity('Isikan kata laluan anda semula.')"
                 oninput="this.setCustomValidity('')" />
-            </p>    
+            </p>  
+
             <p style="text-align:left;">  
                 <label> Umur: &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp&nbsp </label>  
                 <input type = "number" id ="umur" name  = "umur" required
@@ -38,16 +41,20 @@
             <p id = "btnBoy"><label>
                 <input type = "radio" name = "jantina" value = 'lelaki' required
                 oninvalid="this.setCustomValidity('Pilih jantina anda.')"
-                oninput="this.setCustomValidity('')" /> Lelaki &nbsp 
-            </label></p>
+                oninput="this.setCustomValidity('')" /> Lelaki &nbsp </label>
+            </p>
             <p id = "btnGirl"><label><input type = "radio" name = "jantina" value = 'perempuan'/> Perempuan </p></label>
             <br>
             
-            <button id = "btndaftar" name = 'btn' value = "peserta" >Daftar</button>   
+            <button id = "btndaftar" name = 'btn' value = "peserta" > Daftar </button> 
+
         </form>
-        <a href='login.php'><button id = 'btncancel' name ='btn'> Kembali </button></a>
+        
+            <a href='login.php'><button id = 'btncancel' name ='btn'> Kembali </button></a>
+
         <?php $con=null; ?>
     </div>  
+
     <script>  
         function validation() {  
             var ps=document.f1.pass.value;  
@@ -62,5 +69,6 @@
             }     
         }                              
     </script>  
+    
 </body>     
 </html>

@@ -30,9 +30,10 @@
             <p style = "font-size:22px;"> 
                 ID: 
                 <?php 
-                        echo $_SESSION['idPengguna'];
+                    echo $_SESSION['idPengguna']; 
                 ?>
                 <br><br>
+
                 Nama:
                 <?php 
                     if ($_SESSION['userType'] == 'peserta') {
@@ -57,6 +58,7 @@
                     }
                 ?>
                 <br><br>
+
                 Kata Laluan:
                 <?php 
                     if ($_SESSION['userType'] == 'peserta') {
@@ -87,6 +89,7 @@
                     }
                 ?>
                 <br><br>
+
                 Umur:
                 <?php 
                     if ($_SESSION['userType'] == 'peserta') {
@@ -112,6 +115,7 @@
                     
                 ?>
                 <br><br>
+
                 Jantina:
                 <?php 
                     if ($_SESSION['userType'] == 'peserta') {
@@ -137,6 +141,7 @@
                 ?>
                 <br>   
             </p>
+            
             <form action = 'kemaskiniForm.php' method = 'POST'>
                 <?php echo "<button id = 'btnchng' name = 'id' value = '$_SESSION[idPengguna]'> Kemaskini </button></a>"; ?>
             </form>

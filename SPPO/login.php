@@ -16,6 +16,7 @@
                 oninvalid="this.setCustomValidity('Isikan ID anda.')"
                 oninput="this.setCustomValidity('')"/>  
             </p>  
+
             <p style="text-align:center;">  
                 <label>Kata Laluan:</label>  
                 <input type = "password" id ="pass" name  = "pass" 
@@ -31,8 +32,8 @@
             <p style="text-align:center;">     
                 <input type = "submit" id = "btnlogin" name = 'btn' value = "Login" required = "required" />  
             </p>
-            <p id = "btndaftar"><a href='daftarPeserta.php' style = "text-decoration: none;"> 
-            Daftar Sebagi Peserta</a></p>  
+            <p id = "btndaftar"><a href='daftarPeserta.php' style = "text-decoration: none;"> Daftar Sebagi Peserta </a></p>  
+            
         </form>
         <?php $con=null; ?>
     </div>   
