@@ -1,0 +1,68 @@
+body{   
+    background-image: url('Sauce/wallpaperOrigami2_blur.jpg');
+    background-attachment: fixed;
+    background-size: cover;
+    background-position: center; 
+    overflow-y: hidden;
+    background-repeat: no-repeat;
+    margin-right: 80px;
+    margin-left: 80px;  
+}  
+.main{    
+    height: 600px;
+    top: 0px;
+    bottom: 0px;
+}  
+.title {
+    border-bottom: solid rgb(73, 62, 73) 3px; 
+    width: 100%;
+}
+.ui {
+    position: absolute;
+    right: 80px; 
+}
+.heading {
+    text-align: center;
+    font-size: 2.1vh;
+}
+.content {
+    background: rgb(255, 222, 185, 0.5);  
+    border: solid rgb(73, 62, 73) 1px;  
+    border-radius: 2px;  
+    position:relative;
+    margin: auto;
+    margin-bottom: 40px;
+    padding-bottom: 50px;  
+    height: 65vh;
+    width:85%; 
+}
+.frm {
+    position: relative;
+    text-align: left;
+    font-size: 3vh;
+    margin-top: 7%;
+    margin-left: 36%;
+}
+
+#komen * {
+    vertical-align: middle;
+}
+#btnsemak {
+	background-color:transparent;
+	border-radius:5px;
+	border:2px solid #3a3b3a;
+	cursor:pointer;
+	color:#404040;
+	padding:7px;
+	text-decoration:none;
+    position: relative;
+    margin-left: 46%;
+}
+#btnsemak:hover {
+	background:linear-gradient(to bottom, #ffce8a 5%, #ffdd8c 100%);
+	background-color:#ffce8a;
+}
+#btnsemak:active {
+	position:relative;
+	top:3px;
+}

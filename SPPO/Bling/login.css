@@ -1,0 +1,71 @@
+body{   
+    background-image: url('Sauce/wallpaperOrigami.jpg');
+    background-attachment: fixed;
+    background-size: cover;
+    background-position: center; 
+    overflow: hidden;
+    
+}  
+.frm{  
+    border: solid rgb(73, 62, 73) 1px;  
+    width: 330px;  
+    border-radius: 3px;  
+    margin: 15vh auto;  
+    padding: 4vw;
+    padding-top: 2.5vw;
+    padding-bottom: 0vw;
+    background: rgb(236, 230, 230);  
+}  
+
+#btnPeserta{
+    position: relative;
+    margin-left: 40px;
+    bottom: 20px;
+    display:inline-block;
+}
+#btnHakim{
+    position: relative;
+    text-align: center;
+    bottom: 20px;
+    margin-left: 5px;
+    display:inline-block;
+}
+#btnAdmin{
+    position: relative;
+    bottom: 20px;
+    margin-left: 5px;
+    display:inline-block;
+}
+#btnlogin{  
+    color: rgb(236, 230, 230);  
+    background: #337ab7;  
+    padding: 7px;   
+    border: solid rgb(73, 62, 73) 1px;
+    border-radius: 4px;
+    position:relative;
+    bottom: 30px;
+}  
+#btnlogin:active {
+	position:relative;
+	bottom:27px;
+}
+#btndaftar{  
+    color: rgb(236, 230, 230);
+    position: relative;
+    bottom: 30px; 
+    text-align: center;
+}
+#btndaftar:active {
+	position:relative;
+	bottom:27px;
+}
+.loginfail {
+    background: rgb(236, 230, 230);
+    border: solid rgb(73, 62, 73) 1px;  
+    width: 330px;  
+    border-radius: 2px;  
+    margin: 120px auto;  
+    padding: 50px;
+    padding-top: 30px;
+    padding-bottom: 30px;
+}
