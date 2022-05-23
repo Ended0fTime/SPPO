@@ -27,7 +27,7 @@
                 $con->query($sql);
         }
 
-        if ($_SESSION['userType'] == 'admin' && substr_replace($id, '', 1, 1) != 'A') {
+        if ($_SESSION['userType'] == 'admin' && $userType != 'A') {
                 echo "<link rel = 'stylesheet' type = 'text/css' href = '../Bling/form.css'><div></div>
                         <script>
                                 alert('Maklumat berjaya dikemaskini')
