@@ -4,33 +4,28 @@
         include('connection.php');
 
         $id = $_POST['id'];
-        $name = $_POST['nama'];  
-        $password = $_POST['pass'];  
-        $jantina = $_POST['jantina'];
-        $umur = $_POST['umur'];
+        $userType = substr_replace($id, '', 1, 1);
 
-        if (substr_replace($id, '', 1, 1) == 'P') {
-                $sql = "UPDATE `peserta` 
-                SET `namaPeserta` = '$name', `kataLaluanPeserta` = '$password', 
-                `jantinaPeserta` = '$jantina', `umurPeserta` = '$umur' 
-                WHERE `peserta`.`idPeserta` = '$id'; "; 
+        if ($_POST['nama'] != "") {
+                $name = $_POST['nama'];  
+                $sql = updateName($userType, $id, $name);
+                $con->query($sql);
         }
-        else if (substr_replace($id, '', 1, 1) == 'H'){
-                $sql = "UPDATE `hakim` 
-                SET `namaHakim` = '$name', `kataLaluanHakim` = '$password', 
-                `jantinaHakim` = '$jantina', `umurHakim` = '$umur' 
-                WHERE `hakim`.`idHakim` = '$id'; "; 
+        if ($_POST['pass'] != "") {
+                $password = $_POST['pass'];  
+                $sql = updatePass($userType, $id, $password);
+                $con->query($sql);
         }
-        else if (substr_replace($id, '', 1, 1) == 'A'){
-                $sql = "UPDATE `admin` 
-                SET `namaAdmin` = '$name', `kataLaluanAdmin` = '$password', 
-                `jantinaAdmin` = '$jantina', `umurAdmin` = '$umur' 
-                WHERE `admin`.`idadmin` = '$id'; "; 
+        if ( isset($_POST['jantina']) && $_POST['jantina'] != "") {
+                $jantina = $_POST['jantina'];
+                $sql = updateSex($userType, $id, $jantina);
+                $con->query($sql);
         }
-        else {
-                kickBack();
+        if ($_POST['umur'] != "") {
+                $umur = $_POST['umur'];
+                $sql = updateAge($userType, $id, $umur);
+                $con->query($sql);
         }
-        $con->query($sql);
 
         if ($_SESSION['userType'] == 'admin' && substr_replace($id, '', 1, 1) != 'A') {
                 echo "<link rel = 'stylesheet' type = 'text/css' href = '../Bling/form.css'><div></div>
@@ -46,9 +41,58 @@
                                 window.location.href = '../General/info.php'
                         </script>";
         }
+?>
+
+<?php
+        function updateName($type, $x, $nama) {
+                if ($type == 'P') {
+                        $query = "UPDATE `peserta` SET namaPeserta = '$nama' WHERE `peserta`.`idPeserta` = '$x'";
+                }
+                else if ($type == 'H') {
+                        $query = "UPDATE `hakim` SET namaHakim = '$nama' WHERE `hakim`.`idHakim` = '$x'";
+                }
+                else if ($type == 'A') {
+                        $query = "UPDATE `admin` SET namaAdmin = '$nama' WHERE `admin`.`idAdmin` = '$x'";
+                }
+                return $query;
+        }
+
+        function updatePass($type, $x, $pass) {
+                if ($type == 'P') {
+                        $query = "UPDATE `peserta` SET kataLaluanPeserta = '$pass' WHERE `peserta`.`idPeserta` = '$x'";
+                }
+                else if ($type == 'H') {
+                        $query = "UPDATE `hakim` SET kataLaluanHakim = '$pass' WHERE `hakim`.`idHakim` = '$x'";
+                }
+                else if ($type == 'A') {
+                        $query = "UPDATE `admin` SET kataLaluanAdmin = '$pass' WHERE `admin`.`idAdmin` = '$x'";
+                }
+                return $query;
+        }
         
-        // echo "<link rel = 'stylesheet' type = 'text/css' href = '../Bling/form.css'>
-        // <div class = 'main'><div class = 'content'></div>
-        // <div class = 'frm'><p style='text-align:center;margin-top:12%;'>Maklumat anda berjaya dikemaskini.
-        // <p style='text-align:center;'><a href='../General/info.php'>Kembali</a></p></div></div>";
+        function updateSex($type, $x, $sex) {
+                if ($type == 'P') {
+                        $query = "UPDATE `peserta` SET jantinaPeserta = '$sex' WHERE `peserta`.`idPeserta` = '$x'";
+                }
+                else if ($type == 'H') {
+                        $query = "UPDATE `hakim` SET jantinaHakim = '$sex' WHERE `hakim`.`idHakim` = '$x'";
+                }
+                else if ($type == 'A') {
+                        $query = "UPDATE `admin` SET jantinaAdmin = '$sex' WHERE `admin`.`idAdmin` = '$x'";
+                }
+                return $query;
+        }
+
+        function updateAge($type, $x, $age) {
+                if ($type == 'P') {
+                        $query = "UPDATE `peserta` SET umurPeserta = '$age' WHERE `peserta`.`idPeserta` = '$x'";
+                }
+                else if ($type == 'H') {
+                        $query = "UPDATE `hakim` SET umurHakim = '$age' WHERE `hakim`.`idHakim` = '$x'";
+                }
+                else if ($type == 'A') {
+                        $query = "UPDATE `admin` SET umurAdmin = '$age' WHERE `admin`.`idAdmin` = '$x'";
+                }
+                return $query;
+        }
 ?>

@@ -25,11 +25,11 @@
                WHERE `markah`.`idPeserta` = '$idPeserta'; ";
         $con->query($sql);
 
-        echo "<link rel = 'stylesheet' type = 'text/css' href = '../Bling/semakHakim.css'>
-              <div class = 'main'>
-                    <p style='position:relative;text-align:center;margin-top:11%;padding-top:6%;'>Markah karya berjaya dikemaskini.
-                    <p style='position:relative;text-align:center;'><a href='../Hakim/semakHakim.php'>Kembali</a></p>
-              </div>";
+        echo "<link rel = 'stylesheet' type = 'text/css' href = '../Bling/semakHakim.css'><div></div> 
+              <script> 
+                alert('Markah $idPeserta berjaya dikemaskini'); 
+                window.location.href='../Hakim/semakHakim.php' 
+              </script>";
     }
     
     else if ($idPeserta[0] == 'P') {
@@ -38,10 +38,10 @@
             VALUES('$idMarkah', '$idPeserta', '$langkah', '$keaslian', '$kelihatan', '$jumlah', '$komen')";
         $con->query($sql);
         
-        echo "<link rel = 'stylesheet' type = 'text/css' href = '../Bling/semakHakim.css'>
-              <div class = 'main'>
-                    <p style='position:relative;text-align:center;margin-top:11%;padding-top:6%;'>Karya berjaya disemak.
-                    <p style='position:relative;text-align:center;'><a href='../Hakim/semakHakim.php'>Kembali</a></p>
-              </div>";
+        echo "<link rel = 'stylesheet' type = 'text/css' href = '../Bling/semakHakim.css'><div></div> 
+              <script> 
+                alert('Karya $idPeserta berjaya disemak'); 
+                window.location.href='../Hakim/semakHakim.php' 
+              </script>";
     }
 ?>

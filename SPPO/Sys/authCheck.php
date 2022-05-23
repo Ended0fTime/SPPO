@@ -8,10 +8,6 @@
     }
 
     if (isset($_SESSION['idPengguna'])) {
-        function kickBack() {
-            header('location:../login.php');
-        }
-        
         function validPeserta() {
             if ($_SESSION['userType'] != 'peserta') {
                 header("location:../Admin/menuAdmin.php");

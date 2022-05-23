@@ -28,39 +28,21 @@
             <div class = "frm" style="text-align:left;">  
                 <form name = 'f1' action = '../Sys/kemaskini.php' onsubmit = 'return validation()' method = 'POST' autocomplete='off'>
                     
-                    <p>  
-                        <label> Nama Penuh: &nbsp &nbsp &nbsp </label>  
-                        <input type = "text" id ="nama" name  = "nama" required
-                        oninvalid="this.setCustomValidity('Isikan nama anda.')"
-                        oninput="this.setCustomValidity('')" />  
-                    </p>  
+                    <p> <label> Nama Penuh: &nbsp &nbsp &nbsp </label>  
+                    <input type = "text" id ="nama" name  = "nama" /> </p>  
 
-                    <p>  
-                        <label> Kata Laluan: &nbsp &nbsp &nbsp &nbsp </label>  
-                        <input type = "password" id ="pass" name  = "pass" required
-                    oninvalid="this.setCustomValidity('Isikan kata laluan anda.')"
-                    oninput="this.setCustomValidity('')" />
-                    </p>
+                    <p> <label> Kata Laluan: &nbsp &nbsp &nbsp &nbsp </label>
+                    <input type = "password" id ="pass" name  = "pass" /> </p>
 
-                    <p>  
-                    <label> Pasti Kata Laluan: </label>  
-                    <input type = "password" name  = "passcfm" required
-                    oninvalid="this.setCustomValidity('Isikan kata laluan anda semula.')"
-                        oninput="this.setCustomValidity('')" />
-                    </p>  
+                    <p> <label> Pasti Kata Laluan: </label>  
+                    <input type = "password" name  = "passcfm" /> </p>  
 
-                    <p>  
-                        <label> Umur: &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp&nbsp </label>  
-                        <input type = "number" id ="umur" name  = "umur" required
-                        oninvalid="this.setCustomValidity('Isikan umur anda.')"
-                        oninput="this.setCustomValidity('')" />  
-                    </p>
+                    <p> <label> Umur: &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp&nbsp </label>  
+                    <input type = "number" id ="umur" name  = "umur" /> </p>
 
                     <p id = "jantina"> Jantina: &nbsp &nbsp &nbsp &nbsp </p>           
                     <p id = "btnBoy"><label> 
-                        <input type = "radio" name = "jantina" value = 'lelaki' required
-                        oninvalid="this.setCustomValidity('Pilih jantina anda.')"
-                        oninput="this.setCustomValidity('')" /> Lelaki &nbsp 
+                        <input type = "radio" name = "jantina" value = 'lelaki' /> Lelaki &nbsp 
                     </label></p>
                     <p id = "btnGirl"><label><input type = "radio" name = "jantina" value = 'perempuan'/> Perempuan </p></label>
                     <br>
@@ -70,7 +52,6 @@
                 </form>
 
                 <?php $con=null; ?>
-                
             </div>
         </div>
     </div>
@@ -81,7 +62,7 @@
             var pscfm=document.f1.passcfm.value; 
             
             if(ps != pscfm) {  
-                alert("Sila isikan kata laluan anda semula.");  
+                alert("Sila isikan kata laluan semula.");  
                 return false;
             }
             else if (ps == pscfm) {
