@@ -12,7 +12,7 @@ Version 1.1
 	more uniformed css code  
   
 Version 1.2  
-	semak.php now also displays alert msg instead of html words
+	semak.php now also displays alert msg instead of html words  
 	kemaskini.php now updates info individually so u can fill in ur name only instead of filling in everything agn
   
   
