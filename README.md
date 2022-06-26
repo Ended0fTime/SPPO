@@ -1,3 +1,8 @@
+Currently missing stuff:
+import button
+search query
+maybe some minor security stuff
+
 test.php is for checking your browser viewport size.  
 I will put comments in the code when i feel like it.  
 
