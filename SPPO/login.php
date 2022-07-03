@@ -9,26 +9,32 @@
         <h1 style="text-align:center;">Sistem Pengurusan Pertandingan Origami</h1> 
         <form action = "Sys/loginAuth.php" method = "POST" autocomplete="off"> 
 
-            <p style="text-align:center;">  
-                <label>ID Anda: &nbsp&nbsp &nbsp </label>  
-                <input type = "text" id ="user" name  = "user" onkeyup="this.value = this.value.toUpperCase();"
-                autofocus="autofocus" placeholder= "ID" required
-                oninvalid="this.setCustomValidity('Isikan ID anda.')"
-                oninput="this.setCustomValidity('')"/>  
-            </p>  
+        <div class = "input_box">
+            <label class="input">
+                <input class ="input_field" type = "text" id ="user" name  = "user" 
+                    onkeyup="this.value = this.value.toUpperCase();"
+                    autofocus="autofocus" placeholder= " " required
+                    oninvalid="this.setCustomValidity('Isikan ID anda.')"
+                    oninput="this.setCustomValidity('')"/>
+                <span class="input_label">ID Anda</span>
+            </label> 
+        </div>
 
-            <p style="text-align:center;">  
-                <label>Kata Laluan:</label>  
-                <input type = "password" id ="pass" name  = "pass" 
-                placeholder= "Kata laluan" required
-                oninvalid="this.setCustomValidity('Isikan kata laluan anda.')"
-                oninput="this.setCustomValidity('')" />  
-            </p>    
-            
+        <div class = 'input_box'>
+            <label class="input">
+                <input class = "input_field" type = "password" id ="pass" name  = "pass" 
+                    placeholder= " " required
+                    oninvalid="this.setCustomValidity('Isikan kata laluan anda.')"
+                    oninput="this.setCustomValidity('')" />  
+                <span class="input_label">Kata Laluan</span>
+            </label>
+        </div>
+
+        <div class = "userType">
             <p id = "btnPeserta"><label><input type = "radio" name = "loginType" value = 'peserta' checked/> Peserta </label></p>
             <p id = "btnHakim"><label><input type = "radio" name = "loginType" value = 'hakim'/> Hakim </label></p>
             <p id = "btnAdmin"><label><input type = "radio" name = "loginType" value = 'admin' /> Admin </label></p>
-
+        </div>
             <p style="text-align:center;">     
                 <input type = "submit" id = "btnlogin" name = 'btn' value = "Login" required = "required" />  
             </p>

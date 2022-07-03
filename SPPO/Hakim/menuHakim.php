@@ -25,11 +25,14 @@
         <div class = 'heading'>
             <h1 style = "display: inline-block;"> 
                 <?php 
-                    if (date('H')<12){
-                        echo "Selamat Petang, ";
+                    if (date('H')<12) {
+                        echo "Selamat Pagi, ";
+                    }
+                    else if (date('H') >20) {
+                        echo "Selamat Malam, ";
                     }
                     else {
-                        echo "Selamat Pagi, ";
+                        echo "Selamat Petang, ";
                     }
 
                     $sql = "SELECT namaHakim FROM hakim WHERE idHakim = '$_SESSION[idPengguna]'";

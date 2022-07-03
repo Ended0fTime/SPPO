@@ -9,7 +9,7 @@
 <html> 
 <head>
     <title>Sistem Pengurusan Pertandingan Origami</title>
-    <link rel = 'stylesheet' type = 'text/css' href = '../Bling/table.css'>
+    <link rel = 'stylesheet' type = 'text/css' href = '../Bling/senarai.css'>
 <head>
 <body>
     <div id = 'main'>
@@ -30,84 +30,102 @@
 
             <b><p style="text-align:center; font-size:3.3vh;"> Peserta </p></b>
 
+            <input type="text" class = "searchBar" id="searchBarPeserta" onkeyup="searchPeserta()" placeholder="Cari...">
+
             <?php
                 $sql = "SELECT * FROM peserta";
-
                 $result= $con->query($sql); 
 
-                echo "<form method = 'POST'>";
-                echo "<table class = 'table' cellpadding = '10' border = '1'>\n";
-                echo "<thead>\n";
-                echo "<tr>\n";
-
-                echo "<th>ID Peserta</th>\n";
-                echo "<th>Nama </th>\n";
-                echo "<th>Kata Laluan</th>\n";
-                echo "<th>Jantina</th>\n";
-                echo "<th>Umur</th>\n";
-                echo "<th>Ubah</th>\n";
-
-                echo "</tr>\n";
-                echo "</thead>\n";
-                echo "<tbody>\n";
+                echo "<form method = 'POST'><ul class = 'searchQ' id='searchQPeserta'>";
 
                 for ($i=0; $i < mysqli_num_rows($result); $i++) {
                     $row = mysqli_fetch_assoc($result);
-                    echo "<tr>\n";
-                    echo "<td>".$row['idPeserta']."</td>";
-                    echo "<td>".$row['namaPeserta']."</td>";
-                    echo "<td>".$row['kataLaluanPeserta']."</td>";
-                    echo "<td>".$row['jantinaPeserta']."</td>";
-                    echo "<td>".$row['umurPeserta']."</td>";
-                    echo "<td> <button class ='editDelete' type='submit' formaction='../General/kemaskiniForm.php' name='id' value='$row[idPeserta]'>Kemaskini</button>
-                            &nbsp | &nbsp 
-                            <button class ='editDelete' formaction='deleteCfm.php' name='id' value='$row[idPeserta]'>Padam</button></td>";
+                    echo "<li><p>
+                    ID: $row[idPeserta] &nbsp &nbsp &nbsp &nbsp &nbsp
+                    Nama: $row[namaPeserta] &nbsp &nbsp &nbsp &nbsp &nbsp
+                    Kata Laluan: $row[kataLaluanPeserta] &nbsp &nbsp &nbsp &nbsp &nbsp
+                    Jantina: $row[jantinaPeserta] &nbsp &nbsp &nbsp &nbsp &nbsp
+                    Umur: $row[umurPeserta] &nbsp &nbsp &nbsp &nbsp &nbsp
+                    <p><button class ='editDelete' type='submit' formaction='../General/kemaskiniForm.php' name='id' value='$row[idPeserta]'>Kemaskini</button>
+                    &nbsp | &nbsp 
+                    <button class ='editDelete' formaction='deleteCfm.php' name='id' value='$row[idPeserta]'>Padam</button></p>
+
+                    </p></li>";
                 }
 
-                echo "</tbody>\n";
-                echo "</table></form>";   
+                echo "</ul></form>";
             ?>
 
-            <br> <b><p style="text-align:center; font-size:3.3vh;"> Hakim </p></b>
+            <!-- Hakim Section --> <br><br><br>
+
+            <b><p style="text-align:center; font-size:3.3vh;"> Hakim </p></b>
+
+            <input type="text" class = "searchBar" id="searchBarHakim" onkeyup="searchHakim()" placeholder="Cari...">
 
             <?php
-                $sql = "SELECT * FROM Hakim";
-
+                $sql = "SELECT * FROM hakim";
                 $result= $con->query($sql); 
 
-                echo "<form method = 'POST'>";
-                echo "<table class = 'table' cellpadding = '10' border = '1'>\n";
-                echo "<thead>\n";
-                echo "<tr>\n";
-
-                echo "<th>ID Hakim</th>\n";
-                echo "<th>Nama </th>\n";
-                echo "<th>Kata Laluan</th>\n";
-                echo "<th>Jantina</th>\n";
-                echo "<th>Umur</th>\n";
-                echo "<th>Ubah</th>\n";
-
-                echo "</tr>\n";
-                echo "</thead>\n";
-                echo "<tbody>\n";
+                echo "<form method = 'POST'><ul class = 'searchQ' id='searchQHakim'>";
 
                 for ($i=0; $i < mysqli_num_rows($result); $i++) {
                     $row = mysqli_fetch_assoc($result);
-                    echo "<tr>\n";
-                    echo "<td>".$row['idHakim']."</td>";
-                    echo "<td>".$row['namaHakim']."</td>";
-                    echo "<td>".$row['kataLaluanHakim']."</td>";
-                    echo "<td>".$row['jantinaHakim']."</td>";
-                    echo "<td>".$row['umurHakim']."</td>";
-                    echo "<td> <button class ='editDelete' type='submit' formaction='../General/kemaskiniForm.php' name='id' value='$row[idHakim]'>Kemaskini</button>
-                            &nbsp | &nbsp 
-                            <button class ='editDelete' formaction='deleteCfm.php' name='id' value='$row[idHakim]'>Padam</button></td>";
+                    echo "<li><p>
+                    ID: $row[idHakim] &nbsp &nbsp &nbsp &nbsp &nbsp
+                    Nama: $row[namaHakim] &nbsp &nbsp &nbsp &nbsp &nbsp
+                    Kata Laluan: $row[kataLaluanHakim] &nbsp &nbsp &nbsp &nbsp &nbsp
+                    Jantina: $row[jantinaHakim] &nbsp &nbsp &nbsp &nbsp &nbsp
+                    Umur: $row[umurHakim] &nbsp &nbsp &nbsp &nbsp &nbsp
+                    <p><button class ='editDelete' type='submit' formaction='../General/kemaskiniForm.php' name='id' value='$row[idHakim]'>Kemaskini</button>
+                    &nbsp | &nbsp 
+                    <button class ='editDelete' formaction='deleteCfm.php' name='id' value='$row[idHakim]'>Padam</button></p>
+
+                    </p></li>";
                 }
 
-                echo "</tbody>\n";
-                echo "</table></form>";   
+                echo "</ul></form>";
             ?>
         </div>
     </div>
 </body>
+    <script>
+        function searchPeserta() {
+            // Declare variables
+            var input, filter, ul, li, a, i, txtValue;
+            input = document.getElementById('searchBarPeserta');
+            filter = input.value.toUpperCase();
+            ul = document.getElementById("searchQPeserta");
+            li = ul.getElementsByTagName('li');
+
+            // Loop through all list items, and hide those who don't match the search query
+            for (i = 0; i < li.length; i++) {
+                a = li[i].getElementsByTagName("p")[0];
+                txtValue = a.textContent || a.innerText;
+                if (txtValue.toUpperCase().indexOf(filter) > -1) {
+                li[i].style.display = "";
+                } else {
+                li[i].style.display = "none";
+                }
+            }
+        }
+        function searchHakim() {
+            // Declare variables
+            var input, filter, ul, li, a, i, txtValue;
+            input = document.getElementById('searchBarHakim');
+            filter = input.value.toUpperCase();
+            ul = document.getElementById("searchQHakim");
+            li = ul.getElementsByTagName('li');
+
+            // Loop through all list items, and hide those who don't match the search query
+            for (i = 0; i < li.length; i++) {
+                a = li[i].getElementsByTagName("p")[0];
+                txtValue = a.textContent || a.innerText;
+                if (txtValue.toUpperCase().indexOf(filter) > -1) {
+                li[i].style.display = "";
+                } else {
+                li[i].style.display = "none";
+                }
+            }
+        }
+    </script>
 </html>

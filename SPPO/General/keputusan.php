@@ -45,7 +45,7 @@
                 $result4= $con->query($sql4);
                 $result5= $con->query($sql5); 
 
-                echo "<table class = 'tableKeputusan' cellpadding = '10' border = '1'>\n";
+                echo "<table class = 'table' cellpadding = '10' border = '1'>\n";
                 echo "<thead>\n";
                 echo "<tr>\n";
 

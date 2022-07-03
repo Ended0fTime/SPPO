@@ -27,25 +27,43 @@
         <div class = 'content'>
             <div class = "frm" style="text-align:left;">  
                 <form name = 'f1' action = '../Sys/kemaskini.php' onsubmit = 'return validation()' method = 'POST' autocomplete='off'>
-                    
-                    <p> <label> Nama Penuh: &nbsp &nbsp &nbsp </label>  
-                    <input type = "text" id ="nama" name  = "nama" /> </p>  
 
-                    <p> <label> Kata Laluan: &nbsp &nbsp &nbsp &nbsp </label>
-                    <input type = "password" id ="pass" name  = "pass" /> </p>
+                    <div class = 'input_box'>
+                        <label class="input">
+                            <input class = "input_field" type = "text" name  = "nama" placeholder= " "/>
+                            <span class="input_label">Nama</span>
+                        </label>
+                    </div>
 
-                    <p> <label> Pasti Kata Laluan: </label>  
-                    <input type = "password" name  = "passcfm" /> </p>  
+                    <div class = 'input_box'>
+                        <label class="input">
+                            <input class = "input_field" type = "password" name  = "pass" placeholder= " "/>
+                            <span class="input_label">Kata Laluan</span>
+                        </label>
+                    </div>
 
-                    <p> <label> Umur: &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp&nbsp </label>  
-                    <input type = "number" id ="umur" name  = "umur" /> </p>
+                    <div class = 'input_box'>
+                        <label class="input">
+                            <input class = "input_field" type = "password" name  = "passcfm" placeholder= " "/>
+                            <span class="input_label">Pasti Kata Laluan</span>
+                        </label>
+                    </div>
 
-                    <p id = "jantina"> Jantina: &nbsp &nbsp &nbsp &nbsp </p>           
-                    <p id = "btnBoy"><label> 
-                        <input type = "radio" name = "jantina" value = 'lelaki' /> Lelaki &nbsp 
-                    </label></p>
-                    <p id = "btnGirl"><label><input type = "radio" name = "jantina" value = 'perempuan'/> Perempuan </p></label>
-                    <br>
+                    <div class = 'input_box'>
+                        <label class="input">
+                            <input class = "input_field" type = "number" name  = "umur" placeholder= " "/>
+                            <span class="input_label">Umur</span>
+                        </label>
+                    </div>
+
+                    <div class = "jantinaRadio">
+                        <p id = "jantina"> Jantina: &nbsp &nbsp &nbsp &nbsp </p>           
+                        <p id = "btnBoy"><label> 
+                            <input type = "radio" name = "jantina" value = 'lelaki' /> Lelaki &nbsp 
+                        </label></p>
+                        <p id = "btnGirl"><label><input type = "radio" name = "jantina" value = 'perempuan'/> Perempuan </p></label>
+                        <br>
+                    </div>
 
                     <?php echo "<button id = 'btnkemaskini' type = 'submit' name = 'id' value = '$_POST[id]'> Kemaskini </button>"; ?>
 

@@ -8,15 +8,27 @@
                 $sql = "SELECT idHakim FROM hakim ORDER BY idHakim DESC LIMIT 1";
                 $result= $con->query($sql);  
                 $row = mysqli_fetch_assoc($result); 
-                $number = ltrim($row['idHakim'],'H')+1;  
-                $id = 'H' . $number;  
+                if (isset($row['idHakim'])) {
+                        $number = ltrim($row['idHakim'],'H')+1;  
+                        $id = 'H' . $number;  
+                }
+                else {
+                        $id = "H1";
+                }
+                
         } 
         else {                                                                                        
                 $sql = "SELECT idPeserta FROM peserta ORDER BY idPeserta DESC LIMIT 1";
                 $result= $con->query($sql);  
                 $row = mysqli_fetch_assoc($result); 
-                $number = ltrim($row['idPeserta'],'P')+1;  
-                $id = 'P' . $number;   
+                if (isset($row['idPeserta'])) {
+                        $number = ltrim($row['idPeserta'],'P')+1;  
+                        $id = 'P' . $number;   
+                }
+                else {
+                        $id = "P1";
+                }
+                
         }
 
         $name = $_POST['nama'];  

@@ -9,42 +9,55 @@
         <h1 style="text-align:center;">Menu Daftar Peserta</h1>
         <form name = "f1" action = "Sys/daftar.php" onsubmit = "return validation()" method = "POST" autocomplete="off"> 
 
-            <p style="text-align:left;">  
-                <label> Nama Penuh: &nbsp &nbsp &nbsp </label>  
-                <input type = "text" id ="nama" name  = "nama" autofocus="autofocus" required
-                oninvalid="this.setCustomValidity('Isikan nama anda.')"
-                oninput="this.setCustomValidity('')" />  
-            </p>  
+            <div class = 'input_box'>
+                <label class="input">
+                    <input class = "input_field" type = "text" id ="nama" name  = "nama" 
+                    autofocus="autofocus" placeholder= " " required
+                    oninvalid="this.setCustomValidity('Isikan nama anda.')"
+                    oninput="this.setCustomValidity('')" />   
+                    <span class="input_label">Name Penuh</span>
+                </label>
+            </div>
 
-            <p style="text-align:left;">  
-                <label> Kata Laluan: &nbsp &nbsp &nbsp &nbsp </label>  
-                <input type = "password" id ="pass" name  = "pass" required
-                oninvalid="this.setCustomValidity('Isikan kata laluan anda.')"
-                oninput="this.setCustomValidity('')" />
-            </p>
+            <div class = 'input_box'>
+                <label class="input">
+                    <input class = "input_field" type = "password" name  = "pass" 
+                        placeholder= " " required
+                        oninvalid="this.setCustomValidity('Isikan kata laluan anda.')"
+                        oninput="this.setCustomValidity('')" />  
+                    <span class="input_label">Kata Laluan</span>
+                </label>
+            </div>
 
-            <p style="text-align:left;">  
-                <label> Pasti Kata Laluan: </label>  
-                <input type = "password" name  = "passcfm" required
-                oninvalid="this.setCustomValidity('Isikan kata laluan anda semula.')"
-                oninput="this.setCustomValidity('')" />
-            </p>  
+            <div class = 'input_box'>
+                <label class="input">
+                    <input class = "input_field" type = "password" name  = "passcfm" placeholder= " " required
+                        oninvalid="this.setCustomValidity('Isikan kata laluan anda semula.')"
+                        oninput="this.setCustomValidity('')" />
+                    <span class="input_label">Pasti Kata Laluan</span>
+                </label>
+            </div>
 
-            <p style="text-align:left;">  
-                <label> Umur: &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp&nbsp </label>  
-                <input type = "number" id ="umur" name  = "umur" required
-                oninvalid="this.setCustomValidity('Isikan umur anda.')"
-                oninput="this.setCustomValidity('')" />  
-            </p>
 
-            <p id = "jantina" style="text-align: left;"> Jantina: &nbsp &nbsp &nbsp &nbsp </p>           
-            <p id = "btnBoy"><label>
-                <input type = "radio" name = "jantina" value = 'lelaki' required
-                oninvalid="this.setCustomValidity('Pilih jantina anda.')"
-                oninput="this.setCustomValidity('')" /> Lelaki &nbsp </label>
-            </p>
-            <p id = "btnGirl"><label><input type = "radio" name = "jantina" value = 'perempuan'/> Perempuan </p></label>
-            <br>
+            <div class = 'input_box'>
+                <label class="input">
+                    <input class = "input_field" type = "number" id ="umur" name  = "umur" placeholder= " " required
+                        oninvalid="this.setCustomValidity('Isikan umur anda.')"
+                        oninput="this.setCustomValidity('')" />  
+                    <span class="input_label">Umur</span>
+                </label>
+            </div>
+
+            <div class = "jantinaRadio">
+                <p id = "jantina" style="text-align: left;"> Jantina: &nbsp &nbsp </p>           
+                <p id = "btnBoy"><label>
+                    <input type = "radio" name = "jantina" value = 'lelaki' required
+                    oninvalid="this.setCustomValidity('Pilih jantina anda.')"
+                    oninput="this.setCustomValidity('')" /> Lelaki &nbsp </label>
+                </p>
+                <p id = "btnGirl"><label><input type = "radio" name = "jantina" value = 'perempuan'/> Perempuan </p></label>
+                <br>
+            </div>
             
             <button id = "btndaftar" name = 'btn' value = "peserta" > Daftar </button> 
 

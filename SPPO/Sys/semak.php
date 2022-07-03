@@ -6,9 +6,14 @@
     $sql = "SELECT idMarkah FROM markah ORDER BY idMarkah DESC LIMIT 1";
     $result= $con->query($sql);  
     $row = mysqli_fetch_assoc($result); 
-    $number = ltrim($row['idMarkah'],'M')+1;  
+    if (isset($row['idMarkah'])) {
+      $number = ltrim($row['idMarkah'],'M')+1;  
+      $idMarkah = 'M' . $number;  
+    }
+    else {
+      $idMarkah = 'M1';
+    }
 
-    $idMarkah = 'M' . $number;  
     $idPeserta = $_POST['idPeserta'];
     $langkah = $_POST['langkah'] *0.04;
     if ($langkah > 10) { $langkah = 10; }

@@ -73,6 +73,7 @@
     color:#404040;
     box-sizing: border-box;
     border: 1px solid #404040;
+    margin-top: -1px; 
 }
 .dropdown:hover .dropdown-content{
     display:block

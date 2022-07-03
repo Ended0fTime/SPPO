@@ -24,6 +24,7 @@ body{
 .heading {
     text-align: center;
     font-size: 2.1vh;
+
 }
 .content {
     background: rgb(255, 222, 185, 0.5);  
@@ -35,11 +36,45 @@ body{
     padding-bottom: 50px;  
     height: max(65%, inherit);
     width:85%; 
+    list-style-type: none;
 }
-.table {
-    border: solid rgb(73, 62, 73) 1px; 
-    position: relative;
-    margin: 40px auto;
-    text-align:center;
+
+.editDelete {
+    background:transparent;
+    border: none;
+    color:rgb(24, 64, 148);
     font-size: 2.5vh;
+
 }
+.editDelete:hover {
+    color:rgb(39, 120, 219);
+}
+
+
+/* Search query stuff */
+.searchBar {
+    background: transparent;
+    border: solid rgb(73, 62, 73) 1px;  
+    border-radius: 12px;
+    width: 40%; 
+    padding: 8px 16px 8px 36px; 
+    margin-left: 10px;
+    margin-bottom: 12px; 
+    font-size: 16px; 
+}
+.searchQ {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+}
+.searchQ li {
+    background: rgba(253, 228, 200, 0.8);  
+    border: solid rgb(73, 62, 73) 1px;  
+    border-right: 0;
+    border-left: 0;
+    margin-top: -1px; 
+    padding: 10px; 
+    text-decoration: none; 
+    font-size: 14px; 
+}
+  
