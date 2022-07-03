@@ -6,7 +6,7 @@ I will put comments in the code when i feel like it. Those that alr have comment
 One day i might make a version mcm khoon heng that got 1 dbManager n everything use function. One day i might  
 
 ## Version 1.1  
-- Main differences from Version 1.0 gdrive version:  
+Main differences from Version 1.0 gdrive version:  
 - more advanced and sohai version of authCheck.php  
 - senarai now lists out both peserta and hakim instead of only peserta  
 - Admin can edit/delete peserta's and hakim's info  
