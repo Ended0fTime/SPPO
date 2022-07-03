@@ -51,11 +51,11 @@
             <div class = "jantinaRadio">
                 <p id = "jantina" style="text-align: left;"> Jantina: &nbsp &nbsp </p>           
                 <p id = "btnBoy"><label>
-                    <input type = "radio" name = "jantina" value = 'lelaki' required
+                    <input type = "radio" name = "jantina" value = 'lelaki' required = "required"
                     oninvalid="this.setCustomValidity('Pilih jantina anda.')"
                     oninput="this.setCustomValidity('')" /> Lelaki &nbsp </label>
                 </p>
-                <p id = "btnGirl"><label><input type = "radio" name = "jantina" value = 'perempuan'/> Perempuan </p></label>
+                <p id = "btnGirl"><label><input type = "radio" name = "jantina" value = 'perempuan' required = "required"/> Perempuan </p></label>
                 <br>
             </div>
             
