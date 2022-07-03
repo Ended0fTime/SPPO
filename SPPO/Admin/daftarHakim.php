@@ -75,7 +75,7 @@
                             oninvalid="this.setCustomValidity('Pilih jantina anda.')"
                             oninput="this.setCustomValidity('')" /> Lelaki &nbsp </label>
                         </p>
-                        <p id = "btnGirl"><label><input type = "radio" name = "jantina" value = 'perempuan' required = "required"/> Perempuan </p></label>
+                        <p id = "btnGirl"><label><input type = "radio" name = "jantina" value = 'perempuan' required = 'required'/> Perempuan </p></label>
                         <br>
                     </div>
 
