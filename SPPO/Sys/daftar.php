@@ -47,11 +47,6 @@
                                 alert('Hakim berjaya didaftarkan. ID hakim baru ialah $id');
                                 window.location.href = '../Admin/daftarHakim.php';
                         </script>";
-
-                // echo "<link rel = 'stylesheet' type = 'text/css' href = '../Bling/form.css'>
-                // <div id = 'frm'> <p  style='text-align:center;'> 
-                // Hakim berjaya didaftarkan. </p><h3 style='text-align:center;'><a>ID hakim baru ialah $id.</a></h3>
-                // <p style='text-align:center;'><a href='../Admin/daftarHakim.php'>Kembali</a></p></div>";
         }
         else if ($_SESSION['userType'] == 'peserta') {
                 $sql ="INSERT INTO `peserta` 
@@ -62,21 +57,9 @@
                 echo "<link rel = 'stylesheet' type = 'text/css' href = '../Bling/login.css'>
                         <div></div>
                         <script>
-                                alert('Anda berjaya didaftarkan. ID anda ialah $id')
+                                alert('Anda berjaya didaftarkan. ID anda ialah $id');
+                                window.location.href = '../login.php';
                         </script>";
-
-                echo "<link rel = 'stylesheet' type = 'text/css' href = '../Bling/login.css'>
-                        <div id = 'frm'>
-                                <h3 style='text-align:center;'><a>ID anda ialah $id.</a></h3>
-                                <p style='text-align:center;'><a href='../login.php'>Kembali</a></p>
-                        </div>";
-
-                // echo "<link rel = 'stylesheet' type = 'text/css' href = '../Bling/login.css'>
-                // <div id = 'frm'> <p  style='text-align:center;'> 
-                // Anda berjaya didaftarkan. </p><h3 style='text-align:center;'><a>ID anda ialah $id.</a></h3>
-                // <p style='text-align:center;'><a href='../login.php'>Kembali</a></p></div>";
-
-                //$_SESSION["idPengguna"] = $id;
         }
 ?>
 
