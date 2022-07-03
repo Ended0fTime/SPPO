@@ -1,10 +1,7 @@
-Currently missing stuff:
-, import button
-, search query
-, maybe some minor security stuff
+Currently missing stuff: import button, maybe some minor security stuff
 
-test.php is for checking your browser viewport size.  
-I will put comments in the code when i feel like it.  
+test.html is for checking your browser viewport size.  
+I will put comments in the code when i feel like it. Those that alr have comments just mean i copied it
 
 Version 1.1  
 	Main differences from Version 1.0 gdrive version:  
