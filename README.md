@@ -22,12 +22,12 @@ Main differences from Version 1.0 gdrive version:
 ## Version 1.3 3/7/2022
 - Updated css of all textboxes to look more modern n less like 1990s
 - Added search query into senarai.php
+- Fixed daftar where perempuan cannot be selected (html is stupid)
 - Senarai.php now uses its own senarai.css file
+- Added zero increment to semak.php and daftar.php
 - Fixed time zone error for main menu where system would display "Selamat Petang" when it is between 12-20pm
 - Added a "Selamat Malam" condition in main menu because why not
 - Fixed navbar dropdown menu border margin 1 pixel diff error (wasnt even important)
 - Test.html now contains a spare code of the textbox css n html
 - Updated table.css to no longer include elements from senarai.php
 - Renamed 1 element in keputusan.php for more uniform css n html namings
-- Added zero increment to semak.php and daftar,php
-
