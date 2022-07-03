@@ -1,7 +1,6 @@
 ### Currently missing stuff: import button, maybe some minor security stuff
 
 test.html is for checking your browser viewport size.  
-You may remove the extra PHP successful registration notice in daftar.php  
 I will put comments in the code when i feel like it. Those that alr have comments just mean i copied it  
 One day i might make a version mcm khoon heng that got 1 dbManager n everything use function. One day i might  
 
@@ -31,3 +30,4 @@ Main differences from Version 1.0 gdrive version:
 - Test.html now contains a spare code of the textbox css n html
 - Updated table.css to no longer include elements from senarai.php
 - Renamed 1 element in keputusan.php for more uniform css n html namings
+- Removed the commented code and extra html word msg in daftar.php
