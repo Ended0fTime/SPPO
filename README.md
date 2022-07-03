@@ -25,7 +25,7 @@ Main differences from Version 1.0 gdrive version:
 - Fixed daftar where perempuan cannot be selected (html is stupid)
 - Senarai.php now uses its own senarai.css file
 - Added zero increment to semak.php and daftar.php
-- Fixed time zone error for main menu where system would display "Selamat Petang" when it is between 12-20pm
+- Fixed time zone error for main menu where system would display "Selamat Petang" when it is morning
 - Added a "Selamat Malam" condition in main menu because why not
 - Fixed navbar dropdown menu border margin 1 pixel diff error (wasnt even important)
 - Test.html now contains a spare code of the textbox css n html
