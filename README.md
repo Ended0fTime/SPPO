@@ -1,9 +1,9 @@
 ### Currently missing stuff: import button, maybe some minor security stuff
 
 test.html is for checking your browser viewport size.  
-You may remove the extra PHP successful registration notice in daftar.php 
-I will put comments in the code when i feel like it. Those that alr have comments just mean i copied it
-One day i might make a version mcm khoon heng that got 1 dbManager n everything use function. One day i might
+You may remove the extra PHP successful registration notice in daftar.php  
+I will put comments in the code when i feel like it. Those that alr have comments just mean i copied it  
+One day i might make a version mcm khoon heng that got 1 dbManager n everything use function. One day i might  
 
 ## Version 1.1  
 - Main differences from Version 1.0 gdrive version:  
