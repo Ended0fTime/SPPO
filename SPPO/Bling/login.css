@@ -103,7 +103,7 @@ body{
     padding-top: 0.1rem;
     padding-bottom: 0.1rem;
     margin: 0.5rem;
-    margin-top: 1.15rem;
+    margin-top: 0.5rem;           /* firefox = 1.15rem, 19px, 3vh || chrome = 0.5rem, 9px, 1.35vh */
     white-space: nowrap;
     transform: translate(0, 0);
     transform-origin: 0 0;
@@ -111,7 +111,7 @@ body{
     color: rgb(73, 62, 73);
     transition: transform 120ms ease-in;
     font-weight: bold;
-    line-height: 2;
+    line-height: 1.3rem;    /* firefox = 1.6rem, 24px, 4vh || chrome = 1.3rem, 21px, 3.3vh */
     border-radius: 15px;
 }
 

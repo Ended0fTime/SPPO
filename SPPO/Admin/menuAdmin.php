@@ -25,10 +25,10 @@
         <div class = 'heading'>
             <h1 style = "display: inline-block;"> 
                 <?php 
-                    if (date('H')+8<12) {
+                    if (date('H')+6 < 12) {
                         echo "Selamat Pagi, ";
                     }
-                    else if (date('H')+8>=20) {
+                    else if (date('H')+6 >= 20) {
                         echo "Selamat Malam, ";
                     }
                     else {

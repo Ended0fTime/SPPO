@@ -35,22 +35,39 @@
             <?php
                 $sql = "SELECT * FROM peserta";
                 $result= $con->query($sql); 
+                $sql2 = "SELECT * FROM markah";
+                $result2= $con->query($sql2); 
 
                 echo "<form method = 'POST'><ul class = 'searchQ' id='searchQPeserta'>";
 
                 for ($i=0; $i < mysqli_num_rows($result); $i++) {
                     $row = mysqli_fetch_assoc($result);
+                    $row2 = mysqli_fetch_assoc($result2);
+                    
                     echo "<li><p>
-                    ID: $row[idPeserta] &nbsp &nbsp &nbsp &nbsp &nbsp
-                    Nama: $row[namaPeserta] &nbsp &nbsp &nbsp &nbsp &nbsp
-                    Kata Laluan: $row[kataLaluanPeserta] &nbsp &nbsp &nbsp &nbsp &nbsp
-                    Jantina: $row[jantinaPeserta] &nbsp &nbsp &nbsp &nbsp &nbsp
-                    Umur: $row[umurPeserta] &nbsp &nbsp &nbsp &nbsp &nbsp
-                    <p><button class ='editDelete' type='submit' formaction='../General/kemaskiniForm.php' name='id' value='$row[idPeserta]'>Kemaskini</button>
-                    &nbsp | &nbsp 
-                    <button class ='editDelete' formaction='deleteCfm.php' name='id' value='$row[idPeserta]'>Padam</button></p>
+                    ID: <b>$row[idPeserta]</b> &nbsp &nbsp &nbsp &nbsp &nbsp
+                    Nama: <b>$row[namaPeserta]</b> &nbsp &nbsp &nbsp &nbsp &nbsp
+                    Kata Laluan: <b>$row[kataLaluanPeserta]</b> &nbsp &nbsp &nbsp &nbsp &nbsp
+                    Jantina: <b>$row[jantinaPeserta]</b> &nbsp &nbsp &nbsp &nbsp &nbsp
+                    Umur: <b>$row[umurPeserta]</b> &nbsp &nbsp &nbsp &nbsp &nbsp";
 
-                    </p></li>";
+                    if (isset($row2)) {
+                        echo "
+                        <p>Markah Langkah: <b>$row2[langkah]</b> &nbsp &nbsp &nbsp &nbsp &nbsp
+                        Markah Kelihatan: <b>$row2[kelihatan]</b> &nbsp &nbsp &nbsp &nbsp &nbsp
+                        Markah Keaslian: <b>$row2[keaslian]</b> &nbsp &nbsp &nbsp &nbsp &nbsp
+                        Jumlah Markah: <b>$row2[jumlahMarkah]</b> &nbsp &nbsp &nbsp &nbsp &nbsp</p>";
+                    }
+
+                    echo "<p><button class ='editDelete' type='submit' formaction='../General/kemaskiniForm.php' name='id' value='$row[idPeserta]'>Kemaskini</button>
+                    &nbsp | &nbsp 
+                    <button class ='editDelete' formaction='deleteCfm.php' name='id' value='$row[idPeserta]'>Padam</button>";
+                    if (isset($row2)) {
+                        echo "
+                        &nbsp | &nbsp 
+                        <button class ='editDelete' formaction='../Sys/cetak.php' name='id' value='$row[idPeserta]'> Cetak Keputusan </button>";
+                    }
+                    echo "</p></li>";
                 }
 
                 echo "</ul></form>";
@@ -70,12 +87,14 @@
 
                 for ($i=0; $i < mysqli_num_rows($result); $i++) {
                     $row = mysqli_fetch_assoc($result);
+
                     echo "<li><p>
-                    ID: $row[idHakim] &nbsp &nbsp &nbsp &nbsp &nbsp
-                    Nama: $row[namaHakim] &nbsp &nbsp &nbsp &nbsp &nbsp
-                    Kata Laluan: $row[kataLaluanHakim] &nbsp &nbsp &nbsp &nbsp &nbsp
-                    Jantina: $row[jantinaHakim] &nbsp &nbsp &nbsp &nbsp &nbsp
-                    Umur: $row[umurHakim] &nbsp &nbsp &nbsp &nbsp &nbsp
+                    ID: <b>$row[idHakim]</b> &nbsp &nbsp &nbsp &nbsp &nbsp
+                    Nama: <b>$row[namaHakim]</b> &nbsp &nbsp &nbsp &nbsp &nbsp
+                    Kata Laluan: <b>$row[kataLaluanHakim]</b> &nbsp &nbsp &nbsp &nbsp &nbsp
+                    Jantina: <b>$row[jantinaHakim]</b> &nbsp &nbsp &nbsp &nbsp &nbsp
+                    Umur: <b>$row[umurHakim]</b> &nbsp &nbsp &nbsp &nbsp &nbsp
+
                     <p><button class ='editDelete' type='submit' formaction='../General/kemaskiniForm.php' name='id' value='$row[idHakim]'>Kemaskini</button>
                     &nbsp | &nbsp 
                     <button class ='editDelete' formaction='deleteCfm.php' name='id' value='$row[idHakim]'>Padam</button></p>
@@ -108,6 +127,7 @@
                 }
             }
         }
+
         function searchHakim() {
             // Declare variables
             var input, filter, ul, li, a, i, txtValue;
