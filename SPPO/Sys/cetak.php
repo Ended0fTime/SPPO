@@ -68,6 +68,7 @@
         document.body.innerHTML = printContents;
 
         window.print();
-
-        document.body.innerHTML = originalContents;
+        setTimeout(function () {
+            window.location.href = '../Admin/senarai.php';	    
+        }, 2000);
 </script>
