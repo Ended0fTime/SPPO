@@ -31,3 +31,9 @@ Main differences from Version 1.0 gdrive version:
 - Updated table.css to no longer include elements from senarai.php
 - Renamed 1 element in keputusan.php for more uniform css n html namings
 - Removed the commented code and extra html word msg in daftar.php
+
+## Version 1.4 10/7/2022
+- Actually fixed time zone error for main menu (php is stupid)
+- Readjusted textbox css to fit google chrome instead of mozilla firefox (css is even stupider)
+- Senarai.php can now print instead of keputusanPeserta.php. Readjusted html and css according to it
+- Created new cetak.php file to handle the printing part
