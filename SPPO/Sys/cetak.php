@@ -70,5 +70,5 @@
         window.print();
         setTimeout(function () {
             window.location.href = '../Admin/senarai.php';	    
-        }, 2000);
+        }, 100);
 </script>

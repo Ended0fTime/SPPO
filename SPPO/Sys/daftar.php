@@ -2,9 +2,14 @@
         session_start();
         include('connection.php');    
 
-        $_SESSION['userType'] = $_POST['btn'];
-
-        if ($_SESSION['userType'] == 'admin')   {
+        if ($_POST['btn'] == 'admin')   {
+                $sql = "SELECT idAdmin FROM admin ORDER BY idAdmin DESC LIMIT 1";
+                $result= $con->query($sql);  
+                $row = mysqli_fetch_assoc($result); 
+                $number = ltrim($row['idAdmin'],'A')+1;  
+                $id = 'A' . $number;           
+        } 
+        else if ($_POST['btn'] == 'hakim')   {
                 $sql = "SELECT idHakim FROM hakim ORDER BY idHakim DESC LIMIT 1";
                 $result= $con->query($sql);  
                 $row = mysqli_fetch_assoc($result); 
@@ -36,7 +41,20 @@
         $jantina = $_POST['jantina'];
         $umur = $_POST['umur'];
 
-        if ($_SESSION['userType'] == 'admin') {
+
+        if ($_POST['btn'] == 'admin') {
+                $sql ="INSERT INTO `admin` 
+                (`idadmin`, `namaadmin`, `kataLaluanadmin`, `jantinaadmin`, `umuradmin`) 
+                VALUES('$id', '$name', '$password', '$jantina', '$umur')";
+                $con->query($sql); 
+
+                echo "<link rel = 'stylesheet' type = 'text/css' href = '../Bling/form.css'><div></div>
+                        <script>
+                                alert('Admin berjaya didaftarkan. ID admin baru ialah $id');
+                                window.location.href = '../Admin/daftarAdmin.php';
+                        </script>";
+        }
+        else if ($_POST['btn'] == 'hakim') {
                 $sql ="INSERT INTO `hakim` 
                 (`idHakim`, `namaHakim`, `kataLaluanHakim`, `jantinaHakim`, `umurHakim`) 
                 VALUES('$id', '$name', '$password', '$jantina', '$umur')";
@@ -48,7 +66,7 @@
                                 window.location.href = '../Admin/daftarHakim.php';
                         </script>";
         }
-        else if ($_SESSION['userType'] == 'peserta') {
+        else {
                 $sql ="INSERT INTO `peserta` 
                 (`idPeserta`, `namaPeserta`, `kataLaluanPeserta`, `jantinaPeserta`, `umurPeserta`) 
                 VALUES('$id', '$name', '$password', '$jantina', '$umur')";

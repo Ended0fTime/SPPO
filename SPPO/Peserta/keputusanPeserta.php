@@ -79,8 +79,9 @@
                         echo "<a href='../General/keputusan.php'><button id = 'btnkeputusan' name ='btn'> Keputusan Seluruh </button></a>";
                     }
                     else {
+                        echo "<br><br><p style = 'padding: 0 25% 0 25%; white-space: nowrap;'> Karya anda masih belum disemak. Sila bersabar. </p>";
                         echo "<a href='../General/keputusan.php'><button id = 'btnkeputusan2' name ='btn'> Keputusan Seluruh </button></a>";
-                        echo "<br><br><p style = 'padding:25%; padding-top:0%;'> Karya anda masih belum disemak. Sila bersabar. </p>";
+
                     }
                 ?> 
 

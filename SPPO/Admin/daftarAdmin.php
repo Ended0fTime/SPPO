@@ -22,7 +22,7 @@
         </div>
             
         <div class = 'heading'>
-            <h1> Daftar Hakim </h1>
+            <h1> Daftar Admin </h1>
         </div>
         
         <div class = 'content'>
@@ -79,7 +79,7 @@
                         <br>
                     </div>
 
-                    <button id = 'btnkemaskini' style = 'margin-left:42%;' name ='btn' value = 'hakim'> Daftar </button>
+                    <button id = 'btnkemaskini' style = 'margin-left:42%;' name ='btn' value = 'admin'> Daftar </button>
 
                 </form>
 

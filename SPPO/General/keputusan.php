@@ -66,7 +66,7 @@
                         $row4 = mysqli_fetch_assoc($result4);
                         $row5 = mysqli_fetch_assoc($result5);
                         echo "<tr>\n";
-                        echo "<td>".$row['rank']."</td>";
+                        echo "<td><b>".$row['rank']."</b></td>";
                         echo "<td>".$row2['idPeserta']."</td>";
                         echo "<td>".$row3['namaPeserta']."</td>";
                         echo "<td>".$row4['jumlahMarkah']."</td>";

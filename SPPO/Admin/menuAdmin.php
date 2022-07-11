@@ -51,7 +51,11 @@
             <br><br>
             <a href='daftarHakim.php'><button class = 'btn' name = 'hakim'> Daftar Hakim </button></a>
             <br><br>
+            <a href='daftarAdmin.php'><button class = 'btn' name = 'hakim'> Daftar Admin </button></a>
+            <br><br>
             <a href='senarai.php'><button class = 'btn'> Senarai Ahli </button></a>
+            <br><br>
+            <a href='import.php'><button class = 'btn'> Import </button></a>
             <br><br>
             <a href='../General/keputusan.php'><button class = 'btn'> Keputusan Pertandingan </button></a>
             <br><br>

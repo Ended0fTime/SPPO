@@ -104,6 +104,38 @@
 
                 echo "</ul></form>";
             ?>
+
+            <!-- Admin Section --> <br><br><br>
+
+            <b><p style="text-align:center; font-size:3.3vh;"> Admin </p></b>
+
+            <input type="text" class = "searchBar" id="searchBarAdmin" onkeyup="searchAdmin()" placeholder="Cari...">
+
+            <?php
+                $sql = "SELECT * FROM admin";
+                $result= $con->query($sql); 
+
+                echo "<form method = 'POST'><ul class = 'searchQ' id='searchQAdmin'>";
+
+                for ($i=0; $i < mysqli_num_rows($result); $i++) {
+                    $row = mysqli_fetch_assoc($result);
+
+                    echo "<li><p>
+                    ID: <b>$row[idAdmin]</b> &nbsp &nbsp &nbsp &nbsp &nbsp
+                    Nama: <b>$row[namaAdmin]</b> &nbsp &nbsp &nbsp &nbsp &nbsp
+                    Kata Laluan: <b>$row[kataLaluanAdmin]</b> &nbsp &nbsp &nbsp &nbsp &nbsp
+                    Jantina: <b>$row[jantinaAdmin]</b> &nbsp &nbsp &nbsp &nbsp &nbsp
+                    Umur: <b>$row[umurAdmin]</b> &nbsp &nbsp &nbsp &nbsp &nbsp
+
+                    <p><button class ='editDelete' type='submit' formaction='../General/kemaskiniForm.php' name='id' value='$row[idAdmin]'>Kemaskini</button>
+                    &nbsp | &nbsp 
+                    <button class ='editDelete' formaction='deleteCfm.php' name='id' value='$row[idAdmin]'>Padam</button></p>
+
+                    </p></li>";
+                }
+
+                echo "</ul></form>";
+            ?>
         </div>
     </div>
 </body>
@@ -134,6 +166,26 @@
             input = document.getElementById('searchBarHakim');
             filter = input.value.toUpperCase();
             ul = document.getElementById("searchQHakim");
+            li = ul.getElementsByTagName('li');
+
+            // Loop through all list items, and hide those who don't match the search query
+            for (i = 0; i < li.length; i++) {
+                a = li[i].getElementsByTagName("p")[0];
+                txtValue = a.textContent || a.innerText;
+                if (txtValue.toUpperCase().indexOf(filter) > -1) {
+                li[i].style.display = "";
+                } else {
+                li[i].style.display = "none";
+                }
+            }
+        }
+
+        function searchAdmin() {
+            // Declare variables
+            var input, filter, ul, li, a, i, txtValue;
+            input = document.getElementById('searchBarAdmin');
+            filter = input.value.toUpperCase();
+            ul = document.getElementById("searchQAdmin");
             li = ul.getElementsByTagName('li');
 
             // Loop through all list items, and hide those who don't match the search query

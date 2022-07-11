@@ -8,11 +8,9 @@ body{
     margin-right: 80px;
     margin-left: 80px;  
 }  
-.main{    
-    height: 600px;
-    top: 0px;
-    bottom: 0px;
-}  
+.main *{    
+    font-family: Arial, Helvetica, sans-serif;
+} 
 .title {   
     border-bottom: solid rgb(73, 62, 73) 3px; 
     width: 100%;
@@ -57,35 +55,13 @@ body{
 	top:3px;
 }
 
-#btnprint {
-    background-color:transparent;
-    border:2px solid #3a3b3a;
-	border-radius:5px;
-    color:#404040;
-	cursor:pointer;
-    margin-left: 20px;
-    margin-right: 10px;
-    padding:7px;
-    text-decoration:none;
-}
-#btnprint:hover {
-	background:linear-gradient(to bottom, #ffce8a 5%, #ffdd8c 100%);
-	background-color:#ffce8a;
-}
-#btnprint:active {
-	top:3px;
-}
-
 #btnkeputusan2 {
     background-color:transparent;
     border:2px solid #3a3b3a;
 	border-radius:5px;
     color:#404040;
 	cursor:pointer;
-    position: absolute;
-    margin-left: 28%;
 	padding:7px;
-	text-decoration:none;
 }
 #btnkeputusan2:hover {
 	background:linear-gradient(to bottom, #ffce8a 5%, #ffdd8c 100%);
