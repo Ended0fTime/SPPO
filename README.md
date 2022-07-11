@@ -1,8 +1,8 @@
-### Currently missing stuff: import button, maybe some minor security stuff
+### Currently missing stuff: ~~import button~~, nicer css, maybe something i totally forgot abt
 
-test.html is for checking your browser viewport size.  
+test.html is for checking your browser viewport size and has default spare code of new input box.  
 I will put comments in the code when i feel like it. Those that alr have comments just mean i copied it  
-One day i might make a version mcm khoon heng that got 1 dbManager n everything use function. One day i might  
+One day i might make a version mcm khoon heng that got 1 dbManager n everything use function/class. One day i might  
 
 ## Version 1.1  
 Main differences from Version 1.0 gdrive version:  
@@ -37,3 +37,11 @@ Main differences from Version 1.0 gdrive version:
 - Readjusted textbox css to fit google chrome instead of mozilla firefox (css is even stupider)
 - Senarai.php can now print instead of keputusanPeserta.php. Readjusted html and css according to it
 - Created new cetak.php file to handle the printing part
+
+## Version 1.4.1 11/7/2022
+- Created daftarAdmin.php to allow registration of new admins. Changed daftar.php according to it
+- Added new import.php to allow import of .csv files.
+- Created new upload.php to handle backend of importing
+- Updated menuAdmin.php and navbar.php to include Daftar Admin and Import
+- Unified all font to be Arial except buttons
+- updated keputusanPeserta.php's GUI when the peserta's marks have not yet been given to look a bit better.
