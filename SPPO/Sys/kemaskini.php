@@ -28,14 +28,14 @@
         }
 
         if ($_SESSION['userType'] == 'admin' && $userType != 'A') {
-                echo "<link rel = 'stylesheet' type = 'text/css' href = '../Bling/form.css'><div></div>
+                echo "<link rel = 'stylesheet' type = 'text/css' href = '../Bling/menu.css'><div></div>
                         <script>
                                 alert('Maklumat berjaya dikemaskini')
                                 window.location.href = '../Admin/senarai.php'
                         </script>";
         }
         else {
-                echo "<link rel = 'stylesheet' type = 'text/css' href = '../Bling/form.css'><div></div>
+                echo "<link rel = 'stylesheet' type = 'text/css' href = '../Bling/menu.css'><div></div>
                         <script>
                                 alert('Maklumat anda berjaya dikemaskini')
                                 window.location.href = '../General/info.php'

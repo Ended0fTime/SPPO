@@ -12,7 +12,7 @@
     <link rel = 'stylesheet' type = 'text/css' href = '../Bling/senarai.css'>
 <head>
 <body>
-    <div id = 'main'>
+    <div class = 'main'>
 
         <div class = 'title'>
             <h2> &nbsp Sistem Pengurusan Pertandingan Origami </h2>

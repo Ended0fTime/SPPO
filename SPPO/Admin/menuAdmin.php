@@ -49,9 +49,7 @@
             <br><br>
             <a href='../Hakim/semakHakim.php'><button class = 'btn' name = 'hakim'> Semak Karya</button></a>
             <br><br>
-            <a href='daftarHakim.php'><button class = 'btn' name = 'hakim'> Daftar Hakim </button></a>
-            <br><br>
-            <a href='daftarAdmin.php'><button class = 'btn' name = 'hakim'> Daftar Admin </button></a>
+            <a href='daftarAhli.php'><button class = 'btn' name = 'hakim'> Daftar Ahli </button></a>
             <br><br>
             <a href='senarai.php'><button class = 'btn'> Senarai Ahli </button></a>
             <br><br>

@@ -116,8 +116,7 @@
                   <div class='dropdown-content'>
                       <a href='../General/info.php'>Maklumat Diri</a>
                       <a href='../Hakim/semakHakim.php'>Semak Karya</a>
-                      <a href='../Admin/daftarHakim.php'>Daftar Hakim</a>
-                      <a href='../Admin/daftarAdmin.php'>Daftar Admin</a>
+                      <a href='../Admin/daftarAhli.php'>Daftar Ahli</a>
                       <a href='../Admin/senarai.php'>Senarai Ahli</a>
                       <a href='../Admin/import.php'>Import</a>
                       <a href='../General/keputusan.php'>Keputusan Penuh</a>

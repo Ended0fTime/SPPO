@@ -41,7 +41,7 @@ if (isset($_POST['submit']))
                 $jantina = $getData[3];
                 $umur = $getData[4];
  
-                // If user already exists in the database with the same email
+                // If user already exists in the database with the same ID
                 $query = "SELECT idPeserta FROM peserta WHERE idPeserta = '" . $getData[0] . "'";
  
                 $check = mysqli_query($con, $query);
@@ -68,7 +68,7 @@ if (isset($_POST['submit']))
     }
     else
     {
-        echo "<link rel = 'stylesheet' type = 'text/css' href = '../Bling/form.css'><div></div>
+        echo "<link rel = 'stylesheet' type = 'text/css' href = '../Bling/menu.css'><div></div>
             <script>
                 alert('Sila guna jenis fail yang betul');
                 window.location.href = '../Admin/import.php';

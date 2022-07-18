@@ -65,7 +65,7 @@
                         <br>
                     </div>
 
-                    <?php echo "<button id = 'btnkemaskini' type = 'submit' name = 'id' value = '$_POST[id]'> Kemaskini </button>"; ?>
+                    <?php echo "<button id = 'btn' type = 'submit' name = 'id' value = '$_POST[id]'> Kemaskini </button>"; ?>
 
                 </form>
 

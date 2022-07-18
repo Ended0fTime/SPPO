@@ -59,7 +59,7 @@
                 <br>
             </div>
             
-            <button id = "btndaftar" name = 'btn' value = "peserta" > Daftar </button> 
+            <button id = "btndaftar" name = 'regType' value = "peserta" > Daftar </button> 
 
         </form>
         

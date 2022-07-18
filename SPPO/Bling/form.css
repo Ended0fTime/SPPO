@@ -39,22 +39,23 @@ body{
 }
 #jantina{
     position: relative;
-    bottom: 20px;
+    margin-left: 34px;
+    bottom: 13px;
     display: inline-block;
 }
 #btnBoy{
     position: relative;
     margin-left: 10px;
-    bottom: 20px;
+    bottom: 13px;
     display: inline-block;
 }
 #btnGirl{
     position: relative;
-    bottom: 20px;
+    bottom: 13px;
     display: inline-block;
 }
 
-#btnkemaskini {
+#btn {
 	background-color:transparent;
     border:2px solid #3a3b3a;
 	border-radius:5px;
@@ -64,15 +65,36 @@ body{
 	text-decoration:none;
     margin-left: 7.5rem;
 }
-#btnkemaskini:hover {
+#btn:hover {
 	background:linear-gradient(to bottom, #ffce8a 5%, #ffdd8c 100%);
 	background-color:#ffce8a;
 }
-#btnkemaskini:active {
+#btn:active {
 	position:relative;
 	top:3px;
 }
 
+/* Daftar stuff */
+#btnPeserta{
+    position: relative;
+    margin-left: 40px;
+    bottom: 20px;
+    display:inline-block;
+}
+#btnHakim{
+    position: relative;
+    bottom: 20px;
+    margin-left: 5px;
+    display:inline-block;
+}
+#btnAdmin{
+    position: relative;
+    bottom: 20px;
+    margin-left: 5px;
+    display:inline-block;
+}
+
+/* Import stuff */
 #importBar {
     background: transparent;
     border: solid rgb(73, 62, 73) 1px;  
