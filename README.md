@@ -1,4 +1,4 @@
-### Currently missing stuff: ~~import button~~, nicer css, maybe something i totally forgot abt
+### Currently missing stuff: rainbow color words on main menu, search engine based on SQL instead of jscript, nicer css, maybe something i totally forgot abt
 
 test.html is for checking your browser viewport size and has default spare code of new input box.  
 I will put comments in the code when i feel like it. Those that alr have comments just mean i copied it  
@@ -45,3 +45,7 @@ Main differences from Version 1.0 gdrive version:
 - Updated menuAdmin.php and navbar.php to include Daftar Admin and Import
 - Unified all font to be Arial except buttons
 - updated keputusanPeserta.php's GUI when the peserta's marks have not yet been given to look a bit better.
+
+## Version 1.4.2 18/7/2022
+- Unified daftarHakim and daftarAdmin into daftarAhli which also allows admin to register peserta
+- Changed form.css, daftar.php, daftarPeeserta.php, navbar.php n maybe some other files according to the new daftarAhli
