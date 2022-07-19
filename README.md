@@ -1,4 +1,4 @@
-### Currently missing stuff: rainbow color words on main menu, search engine based on SQL instead of jscript, nicer css, maybe something i totally forgot abt
+### Currently missing stuff: rainbow color words on main menu, nicer css, maybe something i totally forgot abt
 
 test.html is for checking your browser viewport size and has default spare code of new input box.  
 I will put comments in the code when i feel like it. Those that alr have comments just mean i copied it  
