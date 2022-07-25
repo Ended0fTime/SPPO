@@ -50,7 +50,7 @@ Main differences from Version 1.0 gdrive version:
 - Unified daftarHakim and daftarAdmin into daftarAhli which also allows admin to register peserta
 - Changed form.css, daftar.php, daftarPeeserta.php, navbar.php n maybe some other files according to the new daftarAhli
 
-## Version 1.4 25/7/2022 Last few updates 
+## Version 1.5 25/7/2022 (Last few updates )
 - Unified all background/basic ui css into a a single file called main.css. Integrated it into all corresponding files.
 - Renamed Senarai Ahli and Daftar Ahli into Senarai Pengguna and Daftar Pengguna. Changed Import to Import Peserta.
 - Optimized keputusanPeserta.php by removing useless PHP Query.
