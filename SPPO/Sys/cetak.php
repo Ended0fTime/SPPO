@@ -1,5 +1,13 @@
 <?php
+    //data check
+    if (!isset($_POST['id'])) {
+        echo "<link rel = 'stylesheet' type = 'text/css' href = '../Bling/main.css'><div></div>
+        <script> alert('Sila login.'); window.location.href='../login.php' </script>";
+    }
+
+    session_start();
     include('connection.php');
+
     $id = $_POST['id'];
 
     $sql = "SELECT * FROM peserta WHERE idPeserta = '$id'";

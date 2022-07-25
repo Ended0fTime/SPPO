@@ -9,6 +9,7 @@
 <html> 
 <head>
     <title>Sistem Pengurusan Pertandingan Origami</title>
+    <link rel = 'stylesheet' type = 'text/css' href = '../Bling/main.css'>
     <link rel = 'stylesheet' type = 'text/css' href = '../Bling/keputusanPeserta.css'>
 <head>
 <body>
@@ -34,10 +35,6 @@
                     $row = mysqli_fetch_assoc($result);
                     
                     if (isset($row)) {
-
-                        $sql = "SELECT jumlahMarkah FROM markah WHERE idPeserta = '$_SESSION[idPengguna]'";
-                        $result = $con->query($sql);
-                        $row = mysqli_fetch_assoc($result);
 
                         echo "<h3> Tempat anda: &nbsp";
                         $sql = "SELECT idPeserta, FIND_IN_SET(jumlahMarkah, 
@@ -81,7 +78,6 @@
                     else {
                         echo "<br><br><p style = 'padding: 0 25% 0 25%; white-space: nowrap;'> Karya anda masih belum disemak. Sila bersabar. </p>";
                         echo "<a href='../General/keputusan.php'><button id = 'btnkeputusan2' name ='btn'> Keputusan Seluruh </button></a>";
-
                     }
                 ?> 
 

@@ -68,10 +68,14 @@ if (isset($_POST['submit']))
     }
     else
     {
-        echo "<link rel = 'stylesheet' type = 'text/css' href = '../Bling/menu.css'><div></div>
+        echo "<link rel = 'stylesheet' type = 'text/css' href = '../Bling/main.css'><div></div>
             <script>
                 alert('Sila guna jenis fail yang betul');
                 window.location.href = '../Admin/import.php';
             </script>";
     }
+}
+else {
+    echo "<link rel = 'stylesheet' type = 'text/css' href = '../Bling/main.css'><div></div>
+    <script> alert('Sila login.'); window.location.href='../login.php' </script>";
 }

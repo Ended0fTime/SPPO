@@ -39,7 +39,7 @@ body{
     border-radius: 4px;
     color: rgb(236, 230, 230); 
     position: relative; 
-    margin-left: min(25%, 90px);
+    margin-left: min(25%, 110px);
     padding: 7px; 
     float:left;
 }

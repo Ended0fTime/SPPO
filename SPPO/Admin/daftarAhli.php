@@ -8,6 +8,7 @@
 <html> 
 <head>
     <title>Sistem Pengurusan Pertandingan Origami</title>
+    <link rel = 'stylesheet' type = 'text/css' href = '../Bling/main.css'>
     <link rel = 'stylesheet' type = 'text/css' href = '../Bling/form.css'>
 <head>
 <body>
@@ -96,8 +97,9 @@
             </div>
         </div>
     </div>
+</body>
 
-    <script>  
+<script>  
         function validation() {  
             var ps=document.f1.pass.value;  
             var pscfm=document.f1.passcfm.value; 
@@ -111,6 +113,5 @@
             }     
         }                              
     </script>
-    
-</body>
+
 </html> 

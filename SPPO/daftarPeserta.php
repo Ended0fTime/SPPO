@@ -49,7 +49,7 @@
             </div>
 
             <div class = "jantinaRadio">
-                <p id = "jantina" style="text-align: left;"> Jantina: &nbsp &nbsp </p>           
+                <p id = "jantina" style="text-align: left;"> &nbspJantina: &nbsp &nbsp </p>           
                 <p id = "btnBoy"><label>
                     <input type = "radio" name = "jantina" value = 'lelaki' required = "required"
                     oninvalid="this.setCustomValidity('Pilih jantina anda.')"

@@ -1,4 +1,10 @@
 <?php   
+        //data check
+        if (!isset($_POST['nama'])) {
+                echo "<link rel = 'stylesheet' type = 'text/css' href = '../Bling/main.css'><div></div>
+                <script> alert('Sila login.'); window.location.href='../login.php' </script>";
+        }
+
         session_start();
         include('connection.php');    
 
@@ -19,8 +25,7 @@
                 }
                 else {
                         $id = "H1";
-                }
-                
+                }       
         } 
         else {                                                                                        
                 $sql = "SELECT idPeserta FROM peserta ORDER BY idPeserta DESC LIMIT 1";
@@ -41,14 +46,13 @@
         $jantina = $_POST['jantina'];
         $umur = $_POST['umur'];
 
-
         if ($_POST['regType'] == 'admin') {
                 $sql ="INSERT INTO `admin` 
                 (`idadmin`, `namaadmin`, `kataLaluanadmin`, `jantinaadmin`, `umuradmin`) 
                 VALUES('$id', '$name', '$password', '$jantina', '$umur')";
                 $con->query($sql); 
 
-                echo "<link rel = 'stylesheet' type = 'text/css' href = '../Bling/menu.css'><div></div>
+                echo "<link rel = 'stylesheet' type = 'text/css' href = '../Bling/main.css'><div></div>
                         <script>
                                 alert('Admin berjaya didaftarkan. ID admin baharu ialah $id');
                                 window.location.href = '../Admin/daftarAhli.php';
@@ -60,7 +64,7 @@
                 VALUES('$id', '$name', '$password', '$jantina', '$umur')";
                 $con->query($sql); 
 
-                echo "<link rel = 'stylesheet' type = 'text/css' href = '../Bling/menu.css'><div></div>
+                echo "<link rel = 'stylesheet' type = 'text/css' href = '../Bling/main.css'><div></div>
                         <script>
                                 alert('Hakim berjaya didaftarkan. ID hakim baharu ialah $id');
                                 window.location.href = '../Admin/daftarAhli.php';
@@ -76,7 +80,7 @@
                         echo "<link rel = 'stylesheet' type = 'text/css' href = '../Bling/login.css'>
                                 <div></div>
                                 <script>
-                                        alert('Anda berjaya didaftarkan. ID peserta baharu ialah $id');
+                                        alert('Peserta berjaya didaftarkan. ID peserta baharu ialah $id');
                                         window.location.href = '../Admin/daftarAhli.php';
                                 </script>";
                 }

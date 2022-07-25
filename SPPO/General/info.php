@@ -8,6 +8,7 @@
 <html> 
 <head>
     <title>Sistem Pengurusan Pertandingan Origami</title>
+    <link rel = 'stylesheet' type = 'text/css' href = '../Bling/main.css'>
     <link rel = 'stylesheet' type = 'text/css' href = '../Bling/info.css'>
 <head>
 <body>

@@ -33,7 +33,7 @@
         } 
     }
     else {
-        echo "<link rel = 'stylesheet' type = 'text/css' href = '../Bling/login.css'><div></div>
+        echo "<link rel = 'stylesheet' type = 'text/css' href = '../Bling/main.css'><div></div>
             <script> alert('Sila login.'); window.location.href='../login.php' </script>";
     }
 ?>

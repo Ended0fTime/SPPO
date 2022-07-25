@@ -3,8 +3,7 @@ body{
     background-attachment: fixed;
     background-size: cover;
     background-position: center; 
-    overflow: hidden;
-    
+    overflow: hidden;  
 }  
 .frm{  
     background: rgb(236, 230, 230, 0.95);

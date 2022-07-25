@@ -1,6 +1,11 @@
 <?php  
+    //data check
+    if (!isset($_POST['idPeserta'])) {
+      echo "<link rel = 'stylesheet' type = 'text/css' href = '../Bling/main.css'><div></div>
+      <script> alert('Sila login.'); window.location.href='../login.php' </script>";
+    }
+
     session_start();
-    include('authCheck.php');  
     include('connection.php');  
 
     $sql = "SELECT idMarkah FROM markah ORDER BY idMarkah DESC LIMIT 1";
@@ -30,7 +35,7 @@
                WHERE `markah`.`idPeserta` = '$idPeserta'; ";
         $con->query($sql);
 
-        echo "<link rel = 'stylesheet' type = 'text/css' href = '../Bling/semakHakim.css'><div></div> 
+        echo "<link rel = 'stylesheet' type = 'text/css' href = '../Bling/main.css'><div></div> 
               <script> 
                 alert('Markah $idPeserta berjaya dikemaskini'); 
                 window.location.href='../Hakim/semakHakim.php' 
@@ -43,7 +48,7 @@
             VALUES('$idMarkah', '$idPeserta', '$langkah', '$keaslian', '$kelihatan', '$jumlah', '$komen')";
         $con->query($sql);
         
-        echo "<link rel = 'stylesheet' type = 'text/css' href = '../Bling/semakHakim.css'><div></div> 
+        echo "<link rel = 'stylesheet' type = 'text/css' href = '../Bling/main.css'><div></div> 
               <script> 
                 alert('Karya $idPeserta berjaya disemak'); 
                 window.location.href='../Hakim/semakHakim.php' 

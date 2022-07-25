@@ -9,6 +9,7 @@
 <html> 
 <head>
     <title>Sistem Pengurusan Pertandingan Origami</title>
+    <link rel = 'stylesheet' type = 'text/css' href = '../Bling/main.css'>
     <link rel = 'stylesheet' type = 'text/css' href = '../Bling/menu.css'>
 <head>
 <body>
@@ -49,11 +50,11 @@
             <br><br>
             <a href='../Hakim/semakHakim.php'><button class = 'btn' name = 'hakim'> Semak Karya</button></a>
             <br><br>
-            <a href='daftarAhli.php'><button class = 'btn' name = 'hakim'> Daftar Ahli </button></a>
+            <a href='daftarAhli.php'><button class = 'btn' name = 'hakim'> Daftar Pengguna </button></a>
             <br><br>
-            <a href='senarai.php'><button class = 'btn'> Senarai Ahli </button></a>
+            <a href='senarai.php'><button class = 'btn'> Senarai Pengguna </button></a>
             <br><br>
-            <a href='import.php'><button class = 'btn'> Import </button></a>
+            <a href='import.php'><button class = 'btn'> Import Peserta </button></a>
             <br><br>
             <a href='../General/keputusan.php'><button class = 'btn'> Keputusan Pertandingan </button></a>
             <br><br>

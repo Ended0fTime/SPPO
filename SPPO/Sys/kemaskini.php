@@ -1,9 +1,16 @@
 <?php    
+        //data check
+        if (!isset($_POST['id'])) {
+                echo "<link rel = 'stylesheet' type = 'text/css' href = '../Bling/main.css'><div></div>
+                <script> alert('Sila login.'); window.location.href='../login.php' </script>";
+        }
+
         session_start();
-        include_once('authCheck.php');
         include('connection.php');
 
         $id = $_POST['id'];
+
+
         $userType = substr_replace($id, '', 1, 1);
 
         if ($_POST['nama'] != "") {
@@ -28,14 +35,14 @@
         }
 
         if ($_SESSION['userType'] == 'admin' && $userType != 'A') {
-                echo "<link rel = 'stylesheet' type = 'text/css' href = '../Bling/menu.css'><div></div>
+                echo "<link rel = 'stylesheet' type = 'text/css' href = '../Bling/main.css'><div></div>
                         <script>
                                 alert('Maklumat berjaya dikemaskini')
                                 window.location.href = '../Admin/senarai.php'
                         </script>";
         }
         else {
-                echo "<link rel = 'stylesheet' type = 'text/css' href = '../Bling/menu.css'><div></div>
+                echo "<link rel = 'stylesheet' type = 'text/css' href = '../Bling/main.css'><div></div>
                         <script>
                                 alert('Maklumat anda berjaya dikemaskini')
                                 window.location.href = '../General/info.php'
