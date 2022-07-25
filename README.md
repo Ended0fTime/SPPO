@@ -1,4 +1,4 @@
-### Currently missing stuff: rainbow color words on main menu, nicer css, maybe something i totally forgot abt
+### Currently missing stuff: semi-customizable menu, nicer and more reliable css, maybe better search engine
 
 test.html is for checking your browser viewport size and has default spare code of new input box.  
 I will put comments in the code when i feel like it. Those that alr have comments just mean i copied it  
@@ -49,3 +49,10 @@ Main differences from Version 1.0 gdrive version:
 ## Version 1.4.2 18/7/2022
 - Unified daftarHakim and daftarAdmin into daftarAhli which also allows admin to register peserta
 - Changed form.css, daftar.php, daftarPeeserta.php, navbar.php n maybe some other files according to the new daftarAhli
+
+## Version 1.4 25/7/2022 Last few updates 
+- Unified all background/basic ui css into a a single file called main.css. Integrated it into all corresponding files.
+- Renamed Senarai Ahli and Daftar Ahli into Senarai Pengguna and Daftar Pengguna. Changed Import to Import Peserta.
+- Optimized keputusanPeserta.php by removing useless PHP Query.
+- Added data null check for all Sys backend files possible. Sys folder is now almost entirely inaccessible by altering URL link.
+- Added a peserta.csv file for importing peserta info.
