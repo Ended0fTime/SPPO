@@ -53,4 +53,10 @@
     text-decoration: none; 
     font-size: 14px; 
 }
-  
+.searchBarForm {
+    margin: 30px 0 0 30px;
+}
+.frm {
+    text-align:center; 
+    padding: 20px;
+}

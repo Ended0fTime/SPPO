@@ -24,16 +24,14 @@
         </div>
             
         <div class = 'heading'>
-            <h1 style="text-align: center"> Senarai Pengguna </h1>
+            <h1 style="text-align:center"> Senarai Pengguna </h1>
         </div>
         
         <div class = 'content'>
 
             <b><p style="text-align:center; font-size:3.3vh;"> Peserta </p></b>
 
-            <form method = "POST" action="searchResult.php">
-                <input type="text" class = "searchBar" name ="search" placeholder="Cari ID..." onkeyup="this.value = this.value.toUpperCase();">
-            </form>
+            <input type="text" class = "searchBar" id="searchBarPeserta" onkeyup="searchPeserta()" placeholder="Cari...">
 
             <?php
                 $sql = "SELECT * FROM peserta";
@@ -80,9 +78,8 @@
 
             <b><p style="text-align:center; font-size:3.3vh;"> Hakim </p></b>
 
-            <form method = "POST" action="searchResult.php">
-                <input type="text" class = "searchBar" name ="search" placeholder="Cari ID...">
-            </form>
+            <input type="text" class = "searchBar" id="searchBarHakim" onkeyup="searchHakim()" placeholder="Cari...">
+
             <?php
                 $sql = "SELECT * FROM hakim";
                 $result= $con->query($sql); 
@@ -113,9 +110,7 @@
 
             <b><p style="text-align:center; font-size:3.3vh;"> Admin </p></b>
 
-            <form method = "POST" action="searchResult.php">
-                <input type="text" class = "searchBar" name ="search" placeholder="Cari ID...">
-            </form>
+            <input type="text" class = "searchBar" id="searchBarAdmin" onkeyup="searchAdmin()" placeholder="Cari...">
 
             <?php
                 $sql = "SELECT * FROM admin";
@@ -145,4 +140,65 @@
         </div>
     </div>
 </body>
+    <script>
+        function searchPeserta() {
+            // Declare variables
+            var input, filter, ul, li, a, i, txtValue;
+            input = document.getElementById('searchBarPeserta');
+            filter = input.value.toUpperCase();
+            ul = document.getElementById("searchQPeserta");
+            li = ul.getElementsByTagName('li');
+
+            // Loop through all list items, and hide those who don't match the search query
+            for (i = 0; i < li.length; i++) {
+                a = li[i].getElementsByTagName("p")[0];
+                txtValue = a.textContent || a.innerText;
+                if (txtValue.toUpperCase().indexOf(filter) > -1) {
+                li[i].style.display = "";
+                } else {
+                li[i].style.display = "none";
+                }
+            }
+        }
+
+        function searchHakim() {
+            // Declare variables
+            var input, filter, ul, li, a, i, txtValue;
+            input = document.getElementById('searchBarHakim');
+            filter = input.value.toUpperCase();
+            ul = document.getElementById("searchQHakim");
+            li = ul.getElementsByTagName('li');
+
+            // Loop through all list items, and hide those who don't match the search query
+            for (i = 0; i < li.length; i++) {
+                a = li[i].getElementsByTagName("p")[0];
+                txtValue = a.textContent || a.innerText;
+                if (txtValue.toUpperCase().indexOf(filter) > -1) {
+                li[i].style.display = "";
+                } else {
+                li[i].style.display = "none";
+                }
+            }
+        }
+
+        function searchAdmin() {
+            // Declare variables
+            var input, filter, ul, li, a, i, txtValue;
+            input = document.getElementById('searchBarAdmin');
+            filter = input.value.toUpperCase();
+            ul = document.getElementById("searchQAdmin");
+            li = ul.getElementsByTagName('li');
+
+            // Loop through all list items, and hide those who don't match the search query
+            for (i = 0; i < li.length; i++) {
+                a = li[i].getElementsByTagName("p")[0];
+                txtValue = a.textContent || a.innerText;
+                if (txtValue.toUpperCase().indexOf(filter) > -1) {
+                li[i].style.display = "";
+                } else {
+                li[i].style.display = "none";
+                }
+            }
+        }
+    </script>
 </html>

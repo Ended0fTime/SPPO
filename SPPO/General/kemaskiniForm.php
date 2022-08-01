@@ -58,7 +58,7 @@
                     </div>
 
                     <div class = "jantinaRadio">
-                        <p id = "jantina"> Jantina: &nbsp &nbsp &nbsp &nbsp </p>           
+                        <p id = "jantina"> Jantina: &nbsp </p>           
                         <p id = "btnBoy"><label> 
                             <input type = "radio" name = "jantina" value = 'lelaki' /> Lelaki &nbsp 
                         </label></p>

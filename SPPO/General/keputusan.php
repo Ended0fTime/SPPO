@@ -46,11 +46,11 @@
                 $result4= $con->query($sql4);
                 $result5= $con->query($sql5); 
 
-                echo "<table class = 'table' cellpadding = '10' border = '1'>\n";
+                echo "<table class = 'table'>\n";
                 echo "<thead>\n";
                 echo "<tr>\n";
 
-                echo "<th>Tempat</th>\n";
+                echo "<th class = 'rank'>Tempat</th>\n";
                 echo "<th>ID Peserta</th>\n";
                 echo "<th>Nama Peserta</th>\n";
                 echo "<th>Jumlah Markah</th>\n";
@@ -67,7 +67,7 @@
                         $row4 = mysqli_fetch_assoc($result4);
                         $row5 = mysqli_fetch_assoc($result5);
                         echo "<tr>\n";
-                        echo "<td><b>".$row['rank']."</b></td>";
+                        echo "<td class = 'rank'><b>".$row['rank']."</b></td>";
                         echo "<td>".$row2['idPeserta']."</td>";
                         echo "<td>".$row3['namaPeserta']."</td>";
                         echo "<td>".$row4['jumlahMarkah']."</td>";

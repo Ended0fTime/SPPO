@@ -48,11 +48,13 @@ if (isset($_POST['submit']))
  
                 if ($check->num_rows > 0)
                 {
-                    mysqli_query($con, "UPDATE peserta SET idPeserta = '" . $id . "', namaPeserta = '" . $nama . "', kataLaluanPeserta = '" . $password . "', jantinaPeserta = '" . $jantina . "', umurPeserta = '" . $umur . "' WHERE idPeserta = '" . $id . "'");
+                    mysqli_query($con, "UPDATE peserta SET idPeserta = '" . $id . "', namaPeserta = '" . $nama . "', kataLaluanPeserta = '" . 
+                    $password . "', jantinaPeserta = '" . $jantina . "', umurPeserta = '" . $umur . "' WHERE idPeserta = '" . $id . "'");
                 }
                 else
                 {
-                     mysqli_query($con, "INSERT INTO peserta (idPeserta, namaPeserta, kataLaluanPeserta, jantinaPeserta, umurPeserta) VALUES ('" . $id . "', '" . $nama . "', '" . $password . "', '" . $jantina . "', '" . $umur . "')");
+                     mysqli_query($con, "INSERT INTO peserta (idPeserta, namaPeserta, kataLaluanPeserta, jantinaPeserta, umurPeserta) 
+                     VALUES ('" . $id . "', '" . $nama . "', '" . $password . "', '" . $jantina . "', '" . $umur . "')");
  
                 }
             }

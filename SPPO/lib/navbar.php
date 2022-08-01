@@ -2,6 +2,7 @@
 .navMenu{
     overflow:hidden;
     background-color:transparent;
+    z-index: 1;
 }
 .navMenu a{
     float:left;
@@ -12,7 +13,10 @@
 }
 .navMenu .dropdown{
     float:left;
-    overflow:hidden
+    overflow:hidden;
+}
+.navMenu .icon{
+    display:none;
 }
 /* main buttons*/
 .main_links{
@@ -54,7 +58,7 @@
     position:absolute;
     min-width:160px;
     box-shadow:0 8px 16px 0 rgba(0,0,0,0.2);
-    z-index:1;
+    z-index:2;
 }
 /* drop down content */
 .dropdown-content a{
@@ -66,6 +70,7 @@
     display:block;
     text-align:left;
     float:none;
+    white-space:nowrap;
 }
 /* drop down content hover */
 .dropdown-content a:hover{
@@ -78,6 +83,63 @@
 .dropdown:hover .dropdown-content{
     display:block
 }
+
+@media screen and (max-width: 1260px), screen and (max-height: 600px){
+	.navMenu a:not(:last-child){
+        display:none;
+    }
+    .navMenu .dropbtn {
+        display:none;
+    }
+	.navMenu .dropdown{
+        display:none;
+    }
+
+	.navMenu a.icon{
+        float:right;
+        display:block;
+        color: black;
+    }
+
+	.navMenu.mobileView{
+        position:relative;
+    }
+	.navMenu.mobileView .icon{
+        position:absolute;
+        right:0;
+        top:0;
+    }
+	.navMenu.mobileView a:not(:last-child){
+        float:none;
+        display:block;
+        text-align:left;
+        width: 100%;
+        background-color:#f0e3d7;
+        line-height: 1.5rem;
+    }
+    .navMenu.mobileView a:hover:not(:last-child){
+        background-color:#f2c995;
+    }
+	.navMenu.mobileView .dropdown{
+        float:none;
+        display:block;
+        text-align:left;
+    }
+
+    .navMenu.mobileView .dropdown-content{
+        display: block;
+        position:relative;   
+    }
+	.navMenu.mobileView .dropdown-content a{
+        background-color:#f0e3d7;
+        position:relative;   
+        width: 200%;
+    }
+    .navMenu.mobileView .dropdown-content a:hover{
+        background-color:#f2c995;
+        border: 0;
+    }
+}
 </style>
 
 
@@ -87,24 +149,24 @@
     if ($_SESSION['userType'] == 'peserta') {
         echo "<a href='../Peserta/menuPeserta.php' class='main_links'>Laman Utama</a>
               <div class='dropdown'>
-                  <button class='dropbtn'>Layar<i class='fa fa-caret-down'>&#9660;</i></button>
+                  <button class='dropbtn'>Layar<i>&#9660;</i></button>
                   <div class='dropdown-content'>
-                      <a href='../General/info.php'>Maklumat Diri</a>
-                      <a href='../Peserta/keputusanPeserta.php'>Keputusan Pertandingan</a>
-                      <a href='../General/keputusan.php'>Keputusan Penuh</a>
-                      <a href='../General/gallery.php'>Galeri</a>
+                      <a href='../General/info.php'> - Maklumat Diri </a>
+                      <a href='../Peserta/keputusanPeserta.php'> - Keputusan Pertandingan </a>
+                      <a href='../General/keputusan.php'> - Keputusan Penuh </a>
+                      <a href='../General/gallery.php'> - Galeri </a>
                   </div>
               </div>";
     }
     else if ($_SESSION['userType'] == 'hakim') {
         echo "<a href='../Hakim/menuHakim.php' class='main_links'>Laman Utama</a>
               <div class='dropdown'>
-                  <button class='dropbtn'>Layar<i class='fa fa-caret-down'>&#9660;</i></button>
+                  <button class='dropbtn'> Layar <i>&#9660;</i> </button>
                   <div class='dropdown-content'>
-                      <a href='../General/info.php'>Maklumat Diri</a>
-                      <a href='../Hakim/semakHakim.php'>Semak Karya</a>
-                      <a href='../General/keputusan.php'>Keputusan Penuh</a>
-                      <a href='../General/gallery.php'>Galeri</a>
+                      <a href='../General/info.php'> - Maklumat Diri </a>
+                      <a href='../Hakim/semakHakim.php'> - Semak Karya </a>
+                      <a href='../General/keputusan.php'> - Keputusan Penuh </a>
+                      <a href='../General/gallery.php'> - Galeri </a>
                   </div>
               </div>";
     }
@@ -112,20 +174,38 @@
     else if ($_SESSION['userType'] == 'admin') {
         echo "<a href='../Admin/menuAdmin.php' class='main_links'>Laman Utama</a>
               <div class='dropdown'>
-                  <button class='dropbtn'>Layar<i class='fa fa-caret-down'>&#9660;</i></button>
+                  <button class='dropbtn'> Layar <i>&#9660;</i> </button>
                   <div class='dropdown-content'>
-                      <a href='../General/info.php'>Maklumat Diri</a>
-                      <a href='../Hakim/semakHakim.php'>Semak Karya</a>
-                      <a href='../Admin/daftarAhli.php'>Daftar Pengguna</a>
-                      <a href='../Admin/senarai.php'>Senarai Pengguna</a>
-                      <a href='../Admin/import.php'>Import Peserta</a>
-                      <a href='../General/keputusan.php'>Keputusan Penuh</a>
-                      <a href='../General/gallery.php'>Galeri</a>
+                      <a href='../General/info.php'> - Maklumat Diri </a>
+                      <a href='../Hakim/semakHakim.php'> - Semak Karya </a>
+                      <a href='../Admin/daftarAhli.php'> - Daftar Pengguna </a>
+                      <a href='../Admin/senarai.php'> - Senarai Pengguna </a>
+                      <a href='../Admin/import.php'> - Import Peserta </a>
+                      <a href='../General/keputusan.php'> - Keputusan Penuh </a>
+                      <a href='../General/gallery.php'> - Galeri </a>
                   </div>
               </div>";
     }
     ?>
-        <a href='../Sys/logout.php' class='main_links'>Log Keluar</a>
+    <a href='../Sys/logout.php' class='main_links'>Log Keluar</a>
+    <a class='icon' id = 'icon' href='javascript:void(0);'>&#9776;</a>
 </div>
 
+<script>
+icon.onmouseover = function openMenu() {  
+    var navMain = document.getElementById('navMenuId');  
+    navMain.className += ' mobileView';
+    
+    icon.onmouseout = function closeMenu() {
+        navMain.className = 'navMenu';
 
+        navMenuId.onmouseover = function keepMenuOpen() {
+            navMain.className += ' mobileView';
+
+            navMenuId.onmouseout = function keepMenuClose() {
+                navMain.className = 'navMenu';
+            }
+        }
+    }
+}
+</script>

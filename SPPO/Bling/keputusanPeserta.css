@@ -21,9 +21,12 @@
 	border-radius: 5px;
     color: #404040;
 	cursor: pointer;
+    width: 15%;
 	padding: 7px;
 	text-decoration: none;
     float: right;
+    font-size: 0.6em;
+    white-space: nowrap;
 }
 #btnkeputusan:hover {
 	background:linear-gradient(to bottom, #ffce8a 5%, #ffdd8c 100%);

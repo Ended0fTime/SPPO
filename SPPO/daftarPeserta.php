@@ -6,7 +6,9 @@
 </head>  
 <body>  
     <div class = "frm">  
-        <h1 style="text-align:center;">Menu Daftar Peserta</h1>
+
+        <h1 style="text-align:center;"> Sistem Pengurusan Pertandingan Origami </h1>
+
         <form name = "f1" action = "Sys/daftar.php" onsubmit = "return validation()" method = "POST" autocomplete="off"> 
 
             <div class = 'input_box'>
@@ -49,7 +51,7 @@
             </div>
 
             <div class = "jantinaRadio">
-                <p id = "jantina" style="text-align: left;"> &nbspJantina: &nbsp &nbsp </p>           
+                <p id = "jantina" style="text-align: left;"> &nbspJantina: &nbsp &nbsp </p>      
                 <p id = "btnBoy"><label>
                     <input type = "radio" name = "jantina" value = 'lelaki' required = "required"
                     oninvalid="this.setCustomValidity('Pilih jantina anda.')"
@@ -63,9 +65,10 @@
 
         </form>
         
-            <a href='login.php'><button id = 'btncancel' name ='btn'> Kembali </button></a>
+        <a href='login.php'><button id = 'btncancel' name ='btn'> Kembali </button></a>
 
         <?php $con=null; ?>
+
     </div>  
 
     <script>  

@@ -13,7 +13,7 @@ body{
     margin: 15vh auto;  
     padding: 4vw;
     padding-top: 2.5vw;
-    padding-bottom: 0vw;
+    padding-bottom: 0;
 }  
 
 .userType {
@@ -44,7 +44,7 @@ body{
     border: solid rgb(73, 62, 73) 1px;
     border-radius: 4px;
     color: rgb(236, 230, 230);  
-    position:relative;
+    position: relative;
     padding: 7px;   
     bottom: 30px;
 }  

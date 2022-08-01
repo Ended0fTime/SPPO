@@ -9,10 +9,10 @@ body{
     background: rgb(236, 230, 230, 0.95);  
     border: solid rgb(73, 62, 73) 1px;  
     border-radius: 15px;  
-    margin: 75px auto;  
+    margin: 15vh auto;  
     padding: 40px;
     padding-bottom: 24px;
-    width: 25%;  
+    width: 380px;  
 }  
 
 .jantinaRadio{

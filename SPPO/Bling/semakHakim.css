@@ -7,15 +7,16 @@
     border: solid rgb(73, 62, 73) 1px;  
     border-radius: 15px;  
     position:relative;
-    margin: auto;
-    padding-bottom: 60px;  
-    height: 60vh;
-    width: 35vw;
+    margin: 0 auto;
+    padding-bottom: 4em;  
+    height: 25em;
+    width: 30em;
 }
 .frm {
     position: relative;
     font-size: 3vh;
-    margin-left: 22%;
+    margin: 0 auto;
+    text-align: center;
 }
 
 #btnSelect {
@@ -66,7 +67,7 @@
 }
 
 .input_box {
-    
+    margin: 0 auto;
     border-radius: 15px;
     margin-top: 5px;
     width: 13.8em;

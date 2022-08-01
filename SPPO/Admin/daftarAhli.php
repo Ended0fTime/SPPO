@@ -23,7 +23,7 @@
         </div>
             
         <div class = 'heading'>
-            <h1> Daftar Ahli </h1>
+            <h1> Daftar Pengguna </h1>
         </div>
         
         <div class = 'content'>
@@ -34,7 +34,7 @@
                         <label class="input">
                             <input class = "input_field" type = "text" id ="nama" name  = "nama" 
                             autofocus="autofocus" placeholder= " " required
-                            oninvalid="this.setCustomValidity('Isikan nama anda.')"
+                            oninvalid="this.setCustomValidity('Isikan nama.')"
                             oninput="this.setCustomValidity('')" />   
                             <span class="input_label">Name Penuh</span>
                         </label>
@@ -44,7 +44,7 @@
                         <label class="input">
                             <input class = "input_field" type = "password" name  = "pass" 
                                 placeholder= " " required
-                                oninvalid="this.setCustomValidity('Isikan kata laluan anda.')"
+                                oninvalid="this.setCustomValidity('Isikan kata laluan.')"
                                 oninput="this.setCustomValidity('')" />  
                             <span class="input_label">Kata Laluan</span>
                         </label>
@@ -53,7 +53,7 @@
                     <div class = 'input_box'>
                         <label class="input">
                             <input class = "input_field" type = "password" name  = "passcfm" placeholder= " " required
-                                oninvalid="this.setCustomValidity('Isikan kata laluan anda semula.')"
+                                oninvalid="this.setCustomValidity('Isikan kata laluan semula.')"
                                 oninput="this.setCustomValidity('')" />
                             <span class="input_label">Pasti Kata Laluan</span>
                         </label>
@@ -63,7 +63,7 @@
                     <div class = 'input_box'>
                         <label class="input">
                             <input class = "input_field" type = "number" id ="umur" name  = "umur" placeholder= " " required
-                                oninvalid="this.setCustomValidity('Isikan umur anda.')"
+                                oninvalid="this.setCustomValidity('Isikan umur yang tepat.')"
                                 oninput="this.setCustomValidity('')" />  
                             <span class="input_label">Umur</span>
                         </label>
@@ -73,7 +73,7 @@
                         <p id = "jantina"> Jantina: </p>           
                         <p id = "btnBoy"><label>
                             <input type = "radio" name = "jantina" value = 'lelaki' required = "required" 
-                            oninvalid="this.setCustomValidity('Pilih jantina anda.')"
+                            oninvalid="this.setCustomValidity('Pilih jantina.')"
                             oninput="this.setCustomValidity('')" /> Lelaki &nbsp </label>
                         </p>
                         <p id = "btnGirl"><label><input type = "radio" name = "jantina" value = 'perempuan' required = "required"/> Perempuan </p></label>

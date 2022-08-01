@@ -22,7 +22,7 @@
         </div>
             
         <div class = 'heading'>
-            <h1 style="text-align:center"> Import </h1>
+            <h1 style="text-align:center"> Import Maklumat Peserta </h1>
         </div>
         
         <div class = 'content'>

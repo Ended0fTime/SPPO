@@ -4,6 +4,11 @@
       echo "<link rel = 'stylesheet' type = 'text/css' href = '../Bling/main.css'><div></div>
       <script> alert('Sila login.'); window.location.href='../login.php' </script>";
     }
+    if (strlen($_POST['komen']) > 100) {
+      echo "<link rel = 'stylesheet' type = 'text/css' href = '../Bling/main.css'><div></div>
+      <script> alert('Komen telah terlebih had yang ditetapkan. Sila isikan semula'); 
+      window.location.href='../Hakim/semakHakim.php' </script>";
+    }
 
     session_start();
     include('connection.php');  

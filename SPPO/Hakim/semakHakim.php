@@ -59,7 +59,7 @@
                             <span class="input_label">Langkah</span>
                             <input class = "input_field" type = "number" name  = "langkah" min = '1' size = '6' 
                                 placeholder = " " required
-                                oninvalid="this.setCustomValidity('Jumlah langkah mesti diisikan')"
+                                oninvalid="this.setCustomValidity('Jumlah langkah yang tepat mesti diisikan')"
                                 oninput="this.setCustomValidity('')" />
                         </label>
                     </div>
@@ -69,7 +69,7 @@
                         <span class="input_label">Markah Keaslian</span>
                             <input class = "input_field" type = "number" name  = "keaslian" min = '1' max = "100" size = '6' 
                                 placeholder = " " required
-                                oninvalid="this.setCustomValidity('Markah Keaslian mesti diisikan')"
+                                oninvalid="this.setCustomValidity('Markah Keaslian yang tepat mesti diisikan')"
                                 oninput="this.setCustomValidity('')" />
                         </label>
                     </div>
@@ -79,7 +79,7 @@
                         <span class="input_label">Markah Kelihatan</span>
                             <input class = "input_field" type = "number" name  = "kelihatan" min = '1' max = "100" size = '6' 
                                 placeholder = " " required
-                                oninvalid="this.setCustomValidity('Markah Kelihatan mesti diisikan')"
+                                oninvalid="this.setCustomValidity('Markah Kelihatan yang tepat mesti diisikan')"
                                 oninput="this.setCustomValidity('')" />
                         </label>
                     </div>
@@ -87,7 +87,7 @@
                     <div class = 'input_box'>
                         <label class="input">
                         <span class="input_label">Komen Hakim</span>
-                            <input class = "input_field" type = "text" name  = "komen"
+                            <input class = "input_field" type = "text" name  = "komen" minlength = '1' maxlength = '100'
                                 placeholder = " " required
                                 oninvalid="this.setCustomValidity('Komen hakim mesti diberikan')"
                                 oninput="this.setCustomValidity('')" />
