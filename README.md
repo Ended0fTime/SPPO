@@ -56,3 +56,10 @@ Main differences from Version 1.0 gdrive version:
 - Optimized keputusanPeserta.php by removing useless PHP Query.
 - Added data null check for all Sys backend files possible. Sys folder is now almost entirely inaccessible by altering URL link.
 - Added a peserta.csv file for importing peserta info.
+
+## Version 1.5.1 1/8/2022
+- Reworked damn search engine. Added a separate searchResult.php page so that an SQL query is used to search instead of jscript in senarai.php.
+- Renamed old senarai.php into senaraiOld.php. Current senarai.php does not have the jscript search functions.
+- Redid CSS to be more consistent. Reworked table.css to look a little more neat.
+- Added upper and lower bound for Komen Hakim in semakHakim.php
+- Changed CSS of navBar.php to support a 'mobile view' which shrinks the nav manu into a hamberburger menu when screen is too small. *Value still needs tuning.
