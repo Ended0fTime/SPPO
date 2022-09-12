@@ -40,7 +40,7 @@
     
                 <p style = "text-align: center;"><input type = "submit" id = "btnlogin" name = 'btn' value = "Login" required = "required" /></p>  
 
-                <p id = "btndaftar"><a href='daftarPeserta.php' style = "text-decoration: none;"> Daftar Sebagi Peserta </a></p>  
+                <p id = "btndaftar"><a href='daftarPeserta.php' style = "text-decoration: none;"> Daftar Sebagai Peserta </a></p>  
             
         </form>
 
