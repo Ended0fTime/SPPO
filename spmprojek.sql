@@ -131,7 +131,7 @@ CREATE TABLE `peserta` (
 
 INSERT INTO `peserta` (`idPeserta`, `namaPeserta`, `kataLaluanPeserta`, `jantinaPeserta`, `umurPeserta`) VALUES
 ('P1', 'Aiman', 'wasd3124', 'lelaki', 16),
-('P2', 'Ai Ling', 'xxlingaixx', 'perempuan', 15),
+('P2', 'Ai Ling', 'xxlingaixx', 'perempuan', 17),
 ('P3', 'Aina', '1bestarinet', 'perempuan', 14),
 ('P4', 'Ah Seng', '1231234123', 'lelaki', 16),
 ('P5', 'Ah Zai', '1231234123', 'lelaki', 17);
